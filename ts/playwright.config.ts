@@ -11,17 +11,16 @@ export default defineConfig({
     // ['line'],
     // ['blob', { outputFile: 'test-results/results.zip' }],
     // ['json', { outputFile: 'test-results/results.json' }],
-    // New library-based reporter:
+    // Desplega reporter - config via env vars (DESPLEGA_ENDPOINT, DESPLEGA_API_KEY, etc.)
+    // or inline config below. Env vars take precedence.
     [
       "./lib/src/reporter.ts",
       {
-        apiKey: process.env.REPORTER_API_KEY ?? "dev-api-key",
-        wsEndpoint: process.env.REPORTER_WS_ENDPOINT ?? "ws://localhost:5555",
-        debug: true,
-        upload: {
-          parallel: 10,
-          chunkSizeMb: 10,
-        },
+        // All config can come from env vars:
+        // DESPLEGA_ENDPOINT, DESPLEGA_API_KEY, DESPLEGA_SECURE, DESPLEGA_DEBUG
+        apiKey: process.env.DESPLEGA_API_KEY || "your-api-key",
+        endpoint: process.env.DESPLEGA_ENDPOINT || "localhost:5555",
+        secure: process.env.DESPLEGA_SECURE ? process.env.DESPLEGA_SECURE === "true" : false,
       } satisfies ReporterConfig,
     ],
   ],

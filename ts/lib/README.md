@@ -20,8 +20,8 @@ export default defineConfig({
     [
       "@desplega.ai/playwright-reporter",
       {
-        apiKey: process.env.REPORTER_API_KEY,
-        wsEndpoint: "wss://api.example.com/ws",
+        // Config via env vars (recommended) or inline options
+        // Env vars: DESPLEGA_ENDPOINT, DESPLEGA_API_KEY, DESPLEGA_SECURE, DESPLEGA_DEBUG
       } satisfies ReporterConfig,
     ],
   ],
@@ -30,29 +30,61 @@ export default defineConfig({
 
 ## Configuration
 
+Configuration can be set via environment variables (recommended) or inline options.
+Environment variables take precedence over inline options.
+
+### Environment Variables
+
+```bash
+# Base endpoint without protocol (default: localhost:5555)
+DESPLEGA_ENDPOINT=api.desplega.ai
+
+# API key for authentication
+DESPLEGA_API_KEY=your-api-key
+
+# Use secure connections - wss/https (default: true for non-localhost)
+DESPLEGA_SECURE=true
+
+# Enable debug logging (default: false)
+DESPLEGA_DEBUG=false
+```
+
+### Inline Options
+
 ```typescript
 interface ReporterConfig {
-  // Required
-  apiKey: string; // API key for authentication
-  wsEndpoint: string; // WebSocket endpoint (e.g., 'wss://api.example.com/ws')
+  endpoint?: string;  // Base endpoint without protocol (e.g., 'api.desplega.ai')
+  apiKey?: string;    // API key for authentication
+  secure?: boolean;   // Use wss/https (default: true for non-localhost)
+  debug?: boolean;    // Enable debug logging (default: false)
 
-  // Optional
-  uploadEndpoint?: string; // HTTP endpoint for uploads (derived from wsEndpoint if not set)
   reconnect?: {
-    enabled?: boolean; // Enable auto-reconnection (default: true)
-    maxAttempts?: number; // Max reconnect attempts (default: 10)
+    enabled?: boolean;       // Enable auto-reconnection (default: true)
+    maxAttempts?: number;    // Max reconnect attempts (default: 10)
     initialDelayMs?: number; // Initial delay (default: 1000)
-    maxDelayMs?: number; // Max delay (default: 30000)
+    maxDelayMs?: number;     // Max delay (default: 30000)
   };
   upload?: {
-    enabled?: boolean; // Enable file uploads (default: true)
-    parallel?: number; // Concurrent uploads (default: 3)
+    enabled?: boolean;    // Enable file uploads (default: true)
+    parallel?: number;    // Concurrent uploads (default: 3)
     chunkSizeMb?: number; // Chunk size for large files (default: 5)
-    retries?: number; // Retry attempts per file (default: 3)
+    retries?: number;     // Retry attempts per file (default: 3)
   };
-  debug?: boolean; // Enable debug logging (default: false)
 }
 ```
+
+All options are optional - configuration can come entirely from environment variables.
+
+### Auto-derived Endpoints
+
+From the base endpoint, the reporter derives:
+- WebSocket: `ws[s]://{endpoint}/ws`
+- Upload: `http[s]://{endpoint}/upload`
+- Health: `http[s]://{endpoint}/health`
+
+### Fail-safe Health Check
+
+The reporter performs a health check at startup (default 3s timeout). If the server is unreachable, the reporter silently disables itself and tests continue normally.
 
 ## Features
 
