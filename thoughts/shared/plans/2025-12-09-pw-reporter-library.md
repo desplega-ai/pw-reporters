@@ -134,9 +134,9 @@ interface ReporterConfig {
 - [x] Update `ts/playwright.config.ts` to use the new library
 
 ### Phase 6: Testing & Polish
-- [ ] Test with local WebSocket server (`ts/ws.ts`)
+- [x] Test with local WebSocket server (`ts/ws.ts`)
 - [x] Add debug logging
-- [ ] Write README
+- [x] Write README
 
 ---
 

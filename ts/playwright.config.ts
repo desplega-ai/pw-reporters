@@ -11,8 +11,6 @@ export default defineConfig({
     // ['line'],
     // ['blob', { outputFile: 'test-results/results.zip' }],
     // ['json', { outputFile: 'test-results/results.json' }],
-    // Legacy reporter:
-    // ["./example-reporter.ts"],
     // New library-based reporter:
     [
       "./lib/src/reporter.ts",
@@ -21,9 +19,9 @@ export default defineConfig({
         wsEndpoint: process.env.REPORTER_WS_ENDPOINT ?? "ws://localhost:5555",
         debug: true,
         upload: {
-          parallel: 5,
-          chunkSizeMb: 0.1,
-        }
+          parallel: 10,
+          chunkSizeMb: 10,
+        },
       } satisfies ReporterConfig,
     ],
   ],

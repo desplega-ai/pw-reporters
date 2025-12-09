@@ -14,6 +14,7 @@
     "pw:test": "playwright test",
     "pw:test:ui": "playwright test --ui",
     "pw:test:headed": "playwright test --headed",
+    "e2e:test": "bun e2e-test.ts",
     "generate-schema": "ts-json-schema-generator --path lib/src/types.ts --type ReporterEvent --tsconfig tsconfig.json --expose all --jsDoc extended --strict-tuples --no-ref-encode --no-top-ref --out schemas/reporter-events.schema.json"
   },
   "peerDependencies": {
