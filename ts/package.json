@@ -1,7 +1,7 @@
 {
   "name": "@desplega.ai/playwright-reporter",
-  "version": "0.1.1",
-  "description": "JSON serialization layer for Playwright reporter types",
+  "version": "0.1.2",
+  "description": "desplega.ai Playwright Reporter - A custom reporter for Playwright tests that integrates with the desplega.ai platform.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",

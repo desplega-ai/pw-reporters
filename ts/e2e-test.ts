@@ -2,15 +2,12 @@
 /**
  * E2E test for the Playwright reporter
  *
- * 1. Starts the WebSocket test server with --summary
+ * 1. Starts the WebSocket test server
  * 2. Runs Playwright tests
- * 3. Verifies the summary file contains expected data
- * 4. Exits with appropriate code
+ * 3. Fetches summary from server via HTTP
+ * 4. Verifies the summary contains expected data
  */
 
-import { $ } from "bun";
-
-const SUMMARY_FILE = ".ws-summary.json";
 const SERVER_PORT = 5555;
 
 interface RunSummary {
@@ -49,16 +46,9 @@ async function waitForServer(maxAttempts = 30): Promise<boolean> {
 async function main() {
   console.log("=== E2E Test: Playwright Reporter ===\n");
 
-  // Clean up previous summary
-  try {
-    await Bun.$`rm -f ${SUMMARY_FILE}`.quiet();
-  } catch {
-    // File doesn't exist, that's fine
-  }
-
   // Start the server in background
   console.log("1. Starting WebSocket server...");
-  const server = Bun.spawn(["bun", "ws.ts", "--summary"], {
+  const server = Bun.spawn(["bun", "ws.ts"], {
     cwd: import.meta.dir,
     stdout: "pipe",
     stderr: "pipe",
@@ -87,24 +77,27 @@ async function main() {
   }
   console.log("   Tests completed successfully");
 
-  // Give server a moment to write the summary file
-  await Bun.sleep(500);
-
-  // Stop the server
-  server.kill();
-  console.log("\n3. Server stopped");
-
-  // Read and verify summary
-  console.log("\n4. Verifying summary...");
-  const summaryFile = Bun.file(SUMMARY_FILE);
-  if (!(await summaryFile.exists())) {
-    console.error("   ERROR: Summary file not found");
+  // Fetch summary from server before stopping it
+  console.log("\n3. Fetching summary from server...");
+  let summary: RunSummary;
+  try {
+    const response = await fetch(`http://localhost:${SERVER_PORT}/summary`);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    summary = await response.json();
+  } catch (err) {
+    console.error("   ERROR: Failed to fetch summary:", err);
+    server.kill();
     process.exit(1);
   }
 
-  const summary: RunSummary = await summaryFile.json();
+  // Stop the server
+  server.kill();
+  console.log("   Server stopped");
 
   // Validate summary
+  console.log("\n4. Verifying summary...");
   const errors: string[] = [];
 
   if (!summary.runId) {
