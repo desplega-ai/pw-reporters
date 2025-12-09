@@ -1,0 +1,8352 @@
+WebSocket connection established
+
+Running 5 tests using 5 workers
+
+{
+  "event": "onBegin",
+  "config": {
+    "configFile": "/Users/taras/Documents/code/pw-examples/ts/playwright.config.ts",
+    "rootDir": "/Users/taras/Documents/code/pw-examples/ts/examples/tests",
+    "shard": null,
+    "workers": 5,
+    "reporters": [
+      [
+        "/Users/taras/Documents/code/pw-examples/ts/example-reporter.ts",
+        null
+      ]
+    ],
+    "projects": [
+      {
+        "testDir": "/Users/taras/Documents/code/pw-examples/ts/examples/tests",
+        "outputDir": "/Users/taras/Documents/code/pw-examples/ts/test-results",
+        "name": "base",
+        "dependencies": [],
+        "metadata": {
+          "id": "1"
+        },
+        "use": {
+          "baseURL": "https://evals.desplega.ai",
+          "trace": "on",
+          "video": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        }
+      }
+    ]
+  },
+  "suite": {
+    "path": [
+      ""
+    ],
+    "title": "",
+    "type": "root",
+    "tests": [],
+    "suites": [
+      {
+        "path": [
+          "",
+          "base"
+        ],
+        "title": "base",
+        "type": "project",
+        "tests": [],
+        "suites": [
+          {
+            "path": [
+              "",
+              "base",
+              "acceptance.spec.ts"
+            ],
+            "title": "acceptance.spec.ts",
+            "type": "file",
+            "location": {
+              "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+              "line": 0,
+              "column": 0
+            },
+            "tests": [],
+            "suites": [
+              {
+                "path": [
+                  "",
+                  "base",
+                  "acceptance.spec.ts",
+                  "Acceptance"
+                ],
+                "title": "Acceptance",
+                "type": "describe",
+                "location": {
+                  "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+                  "line": 4,
+                  "column": 6
+                },
+                "tests": [
+                  "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+                  "6bf654160f377cf56a60-6bd671f8c76b4a2aca93"
+                ],
+                "suites": []
+              }
+            ]
+          },
+          {
+            "path": [
+              "",
+              "base",
+              "buttons/acceptance.spec.ts"
+            ],
+            "title": "buttons/acceptance.spec.ts",
+            "type": "file",
+            "location": {
+              "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+              "line": 0,
+              "column": 0
+            },
+            "tests": [],
+            "suites": [
+              {
+                "path": [
+                  "",
+                  "base",
+                  "buttons/acceptance.spec.ts",
+                  "Buttons page"
+                ],
+                "title": "Buttons page",
+                "type": "describe",
+                "location": {
+                  "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+                  "line": 4,
+                  "column": 6
+                },
+                "tests": [
+                  "92937589a5eadf99c348-1d774bf83445b124c534"
+                ],
+                "suites": []
+              }
+            ]
+          },
+          {
+            "path": [
+              "",
+              "base",
+              "table/acceptance.spec.ts"
+            ],
+            "title": "table/acceptance.spec.ts",
+            "type": "file",
+            "location": {
+              "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+              "line": 0,
+              "column": 0
+            },
+            "tests": [],
+            "suites": [
+              {
+                "path": [
+                  "",
+                  "base",
+                  "table/acceptance.spec.ts",
+                  "Table page"
+                ],
+                "title": "Table page",
+                "type": "describe",
+                "location": {
+                  "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+                  "line": 4,
+                  "column": 6
+                },
+                "tests": [
+                  "536932a370e9f142fe4b-209eaf49842c239d0aac",
+                  "536932a370e9f142fe4b-d8baf303c6b1732972d5"
+                ],
+                "suites": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+[1A[2K[1/5] [base] › examples/tests/buttons/acceptance.spec.ts:18:5 › Buttons page › should be able to click pill @acceptance @ci
+{
+  "event": "onTestBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [],
+    "errors": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+[1A[2K[2/5] [base] › examples/tests/table/acceptance.spec.ts:24:7 › Table page › Alice Brown is present in the table @acceptance @ci
+{
+  "event": "onTestBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [],
+    "errors": []
+  }
+}
+[1A[2K[3/5] [base] › examples/tests/table/acceptance.spec.ts:24:7 › Table page › John Doe is present in the table @acceptance @ci
+{
+  "event": "onTestBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [],
+    "errors": []
+  }
+}
+[1A[2K[4/5] [base] › examples/tests/acceptance.spec.ts:18:5 › Acceptance › should display page title @acceptance @ci
+{
+  "event": "onTestBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [],
+    "errors": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": []
+  }
+}
+[1A[2K[5/5] [base] › examples/tests/acceptance.spec.ts:23:5 › Acceptance › should go to tables @acceptance @ci
+{
+  "event": "onTestBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [],
+    "errors": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": 486,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": 489,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Launch browser"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": 481,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": 484,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Launch browser"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": 486,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": 490,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Launch browser"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": 485,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": 486,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Launch browser"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\"",
+      "Launch browser"
+    ],
+    "title": "Launch browser",
+    "duration": 497,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"browser\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"browser\""
+    ],
+    "title": "Fixture \"browser\"",
+    "duration": 500,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Launch browser"
+    ]
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": 11,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": 10,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": 11,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 17,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create context"
+    ]
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": 13,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\"",
+      "Create context"
+    ],
+    "title": "Create context",
+    "duration": 16,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 19,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create context"
+    ]
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 23,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create context"
+    ]
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 24,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create context"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 23,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create context"
+    ]
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": 344,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 346,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create page"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": 350,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 352,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create page"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": 343,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 348,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create page"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": 350,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 350,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create page"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\"",
+      "Create page"
+    ],
+    "title": "Create page",
+    "duration": 345,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"page\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 347,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "beforeEach hook",
+    "steps": [
+      "Create page"
+    ]
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": 433,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": 1304,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": [
+      "Fixture \"browser\"",
+      "Fixture \"context\"",
+      "Fixture \"page\"",
+      "Navigate to \"/\""
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": 1309,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "beforeEach hook"
+    ]
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Wait for selector getByRole('link', { name: 'table' })"
+    ],
+    "title": "Wait for selector getByRole('link', { name: 'table' })",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 14,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": 447,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": 449,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": 1322,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": [
+      "Fixture \"browser\"",
+      "Fixture \"context\"",
+      "Fixture \"page\"",
+      "Navigate to \"/\""
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": 1323,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "beforeEach hook"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": 452,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": 1335,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": [
+      "Fixture \"browser\"",
+      "Fixture \"context\"",
+      "Fixture \"page\"",
+      "Navigate to \"/\""
+    ]
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 20,
+      "column": 57
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Wait for selector getByRole('link', { name: 'table' })"
+    ],
+    "title": "Wait for selector getByRole('link', { name: 'table' })",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 14,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": 1340,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "beforeEach hook"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Navigate to \"/\""
+    ],
+    "title": "Navigate to \"/\"",
+    "duration": 469,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 19,
+      "column": 21,
+      "function": "EvalPage.goto"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Wait for selector getByRole('link', { name: 'table' })"
+    ],
+    "title": "Wait for selector getByRole('link', { name: 'table' })",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 14,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\""
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Navigate to \"/buttons\""
+    ],
+    "title": "Navigate to \"/buttons\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 19,
+      "column": 20
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Wait for selector getByRole('link', { name: 'table' })"
+    ],
+    "title": "Wait for selector getByRole('link', { name: 'table' })",
+    "duration": 70,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 14,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Wait for selector getByRole('link', { name: 'table' })"
+    ],
+    "title": "Wait for selector getByRole('link', { name: 'table' })",
+    "duration": 65,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 14,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Wait for selector getByRole('link', { name: 'table' })"
+    ],
+    "title": "Wait for selector getByRole('link', { name: 'table' })",
+    "duration": 44,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 14,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Click getByRole('link', { name: 'table' })"
+    ],
+    "title": "Click getByRole('link', { name: 'table' })",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 15,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Click getByRole('link', { name: 'table' })"
+    ],
+    "title": "Click getByRole('link', { name: 'table' })",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 15,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+    "duration": 93,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 20,
+      "column": 57
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Click getByRole('link', { name: 'table' })"
+    ],
+    "title": "Click getByRole('link', { name: 'table' })",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 15,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\""
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Navigate to \"/buttons\""
+    ],
+    "title": "Navigate to \"/buttons\"",
+    "duration": 136,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 19,
+      "column": 20
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Click getByRole('button', { name: 'Pill button' })"
+    ],
+    "title": "Click getByRole('button', { name: 'Pill button' })",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 20,
+      "column": 65
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Click getByRole('link', { name: 'table' })"
+    ],
+    "title": "Click getByRole('link', { name: 'table' })",
+    "duration": 81,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 15,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('Table Demo')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('Table Demo')",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 25,
+      "column": 50
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Click getByRole('link', { name: 'table' })"
+    ],
+    "title": "Click getByRole('link', { name: 'table' })",
+    "duration": 136,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 15,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": 1535,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": [
+      "Fixture \"browser\"",
+      "Fixture \"context\"",
+      "Fixture \"page\"",
+      "Navigate to \"/\"",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": 1537,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "beforeEach hook"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('Table Demo')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('Table Demo')",
+    "duration": 29,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 25,
+      "column": 50
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('Alice Brown')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('Alice Brown')",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 25,
+      "column": 44
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('Alice Brown')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('Alice Brown')",
+    "duration": 9,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 25,
+      "column": 44
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 0,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook",
+      "Click getByRole('link', { name: 'table' })"
+    ],
+    "title": "Click getByRole('link', { name: 'table' })",
+    "duration": 169,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/evals-page.pom.ts",
+      "line": 15,
+      "column": 26,
+      "function": "EvalPage.goToTable"
+    },
+    "parent": "beforeEach hook",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks",
+      "beforeEach hook"
+    ],
+    "title": "beforeEach hook",
+    "duration": 1568,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 13,
+      "column": 10
+    },
+    "parent": "Before Hooks",
+    "steps": [
+      "Fixture \"browser\"",
+      "Fixture \"context\"",
+      "Fixture \"page\"",
+      "Navigate to \"/\"",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Before Hooks"
+    ],
+    "title": "Before Hooks",
+    "duration": 1568,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "beforeEach hook"
+    ]
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('John Doe')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('John Doe')",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 25,
+      "column": 44
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 0,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('John Doe')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('John Doe')",
+    "duration": 7,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 25,
+      "column": 44
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 0,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 0,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Click getByRole('button', { name: 'Pill button' })"
+    ],
+    "title": "Click getByRole('button', { name: 'Pill button' })",
+    "duration": 105,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 20,
+      "column": 65
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('Selected')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('Selected')",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 21,
+      "column": 48
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "Expect \"toBeVisible\" getByText('Selected')"
+    ],
+    "title": "Expect \"toBeVisible\" getByText('Selected')",
+    "duration": 8,
+    "annotations": [],
+    "attachements": [],
+    "category": "expect",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 21,
+      "column": 48
+    },
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "hook",
+    "parent": null,
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"page\""
+    ],
+    "title": "Fixture \"page\"",
+    "duration": 0,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": 56,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": 48,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 102,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "video",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/acceptance-Acceptance-should-display-page-title-base/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": [
+      "Close context"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 90,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "video",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/acceptance-Acceptance-should-go-to-tables-base/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": [
+      "Close context"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": 242,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "screenshot",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/acceptance-Acceptance-should-display-page-title-base/test-finished-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "Fixture \"page\"",
+      "Fixture \"context\""
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": 129,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "screenshot",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/acceptance-Acceptance-should-go-to-tables-base/test-finished-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "Fixture \"page\"",
+      "Fixture \"context\""
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": 47,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 89,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "video",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/table-acceptance-Table-pag-e985a-own-is-present-in-the-table-base/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": [
+      "Close context"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": 118,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "screenshot",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/table-acceptance-Table-pag-e985a-own-is-present-in-the-table-base/test-finished-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "Fixture \"page\"",
+      "Fixture \"context\""
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": 39,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 77,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "video",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/table-acceptance-Table-page-John-Doe-is-present-in-the-table-base/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": [
+      "Close context"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": 112,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "screenshot",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/table-acceptance-Table-page-John-Doe-is-present-in-the-table-base/test-finished-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "Fixture \"page\"",
+      "Fixture \"context\""
+    ]
+  }
+}
+{
+  "event": "onTestEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-f3bd2b621ccf5fe8ce99",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should display page title"
+    ],
+    "title": "should display page title",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.350Z",
+    "duration": 1159,
+    "status": "passed",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('desplega.ai evals')",
+      "After Hooks"
+    ],
+    "errors": []
+  }
+}
+{
+  "event": "onStepBegin",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": -1,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onTestEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-d8baf303c6b1732972d5",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "Alice Brown is present in the table"
+    ],
+    "title": "Alice Brown is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 1170,
+    "status": "passed",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('Alice Brown')",
+      "After Hooks"
+    ],
+    "errors": []
+  }
+}
+{
+  "event": "onTestEnd",
+  "test": {
+    "id": "6bf654160f377cf56a60-6bd671f8c76b4a2aca93",
+    "path": [
+      "",
+      "base",
+      "acceptance.spec.ts",
+      "Acceptance",
+      "should go to tables"
+    ],
+    "title": "should go to tables",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/acceptance.spec.ts",
+      "line": 23,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.351Z",
+    "duration": 1162,
+    "status": "passed",
+    "steps": [
+      "Before Hooks",
+      "Wait for selector getByRole('link', { name: 'table' })",
+      "Click getByRole('link', { name: 'table' })",
+      "Expect \"toBeVisible\" getByText('Table Demo')",
+      "After Hooks"
+    ],
+    "errors": []
+  }
+}
+{
+  "event": "onTestEnd",
+  "test": {
+    "id": "536932a370e9f142fe4b-209eaf49842c239d0aac",
+    "path": [
+      "",
+      "base",
+      "table/acceptance.spec.ts",
+      "Table page",
+      "John Doe is present in the table"
+    ],
+    "title": "John Doe is present in the table",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/table/acceptance.spec.ts",
+      "line": 24,
+      "column": 7
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.349Z",
+    "duration": 1187,
+    "status": "passed",
+    "steps": [
+      "Before Hooks",
+      "Expect \"toBeVisible\" getByText('John Doe')",
+      "After Hooks"
+    ],
+    "errors": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\"",
+      "Close context"
+    ],
+    "title": "Close context",
+    "duration": 43,
+    "annotations": [],
+    "attachements": [],
+    "category": "pw:api",
+    "parent": "Fixture \"context\"",
+    "steps": []
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks",
+      "Fixture \"context\""
+    ],
+    "title": "Fixture \"context\"",
+    "duration": 83,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "video",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/buttons-acceptance-Buttons-page-should-be-able-to-click-pill-base/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "category": "fixture",
+    "parent": "After Hooks",
+    "steps": [
+      "Close context"
+    ]
+  }
+}
+{
+  "event": "onStepEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 0,
+    "status": "skipped",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')",
+      "After Hooks"
+    ],
+    "errors": []
+  },
+  "step": {
+    "path": [
+      "After Hooks"
+    ],
+    "title": "After Hooks",
+    "duration": 126,
+    "annotations": [],
+    "attachements": [
+      {
+        "name": "screenshot",
+        "path": "/Users/taras/Documents/code/pw-examples/ts/test-results/buttons-acceptance-Buttons-page-should-be-able-to-click-pill-base/test-finished-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "category": "hook",
+    "parent": null,
+    "steps": [
+      "Fixture \"page\"",
+      "Fixture \"context\""
+    ]
+  }
+}
+{
+  "event": "onTestEnd",
+  "test": {
+    "id": "92937589a5eadf99c348-1d774bf83445b124c534",
+    "path": [
+      "",
+      "base",
+      "buttons/acceptance.spec.ts",
+      "Buttons page",
+      "should be able to click pill"
+    ],
+    "title": "should be able to click pill",
+    "tags": [
+      "@acceptance",
+      "@ci"
+    ],
+    "expectedStatus": "passed",
+    "location": {
+      "file": "/Users/taras/Documents/code/pw-examples/ts/examples/tests/buttons/acceptance.spec.ts",
+      "line": 18,
+      "column": 5
+    }
+  },
+  "result": {
+    "startTime": "2025-12-09T17:02:38.341Z",
+    "duration": 1236,
+    "status": "passed",
+    "steps": [
+      "Before Hooks",
+      "Navigate to \"/buttons\"",
+      "Click getByRole('button', { name: 'Pill button' })",
+      "Expect \"toBeVisible\" getByText('Selected')",
+      "After Hooks"
+    ],
+    "errors": []
+  }
+}
+[1A[2K  5 passed (2.3s)
+{
+  "event": "onEnd",
+  "result": {
+    "status": "passed",
+    "startTime": "2025-12-09T17:02:37.866Z",
+    "duration": 2276.409
+  }
+}
+{
+  "event": "onExit"
+}
+Files in test-results:
+test-results/.last-run.json
+test-results/table-acceptance-Table-page-John-Doe-is-present-in-the-table-base/test-finished-1.png
+test-results/table-acceptance-Table-page-John-Doe-is-present-in-the-table-base/trace.zip
+test-results/table-acceptance-Table-page-John-Doe-is-present-in-the-table-base/video.webm
+test-results/table-acceptance-Table-pag-e985a-own-is-present-in-the-table-base/test-finished-1.png
+test-results/table-acceptance-Table-pag-e985a-own-is-present-in-the-table-base/trace.zip
+test-results/table-acceptance-Table-pag-e985a-own-is-present-in-the-table-base/video.webm
+test-results/buttons-acceptance-Buttons-page-should-be-able-to-click-pill-base/test-finished-1.png
+test-results/buttons-acceptance-Buttons-page-should-be-able-to-click-pill-base/trace.zip
+test-results/buttons-acceptance-Buttons-page-should-be-able-to-click-pill-base/video.webm
+test-results/acceptance-Acceptance-should-go-to-tables-base/test-finished-1.png
+test-results/acceptance-Acceptance-should-go-to-tables-base/trace.zip
+test-results/acceptance-Acceptance-should-go-to-tables-base/video.webm
+test-results/acceptance-Acceptance-should-display-page-title-base/test-finished-1.png
+test-results/acceptance-Acceptance-should-display-page-title-base/trace.zip
+test-results/acceptance-Acceptance-should-display-page-title-base/video.webm

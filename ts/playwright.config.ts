@@ -10,7 +10,7 @@ export default defineConfig({
     // ['line'],
     // ['blob', { outputFile: 'test-results/results.zip' }],
     // ['json', { outputFile: 'test-results/results.json' }],
-    ["./reporter.ts"],
+    ["./example-reporter.ts"],
   ],
   use: {
     baseURL: "https://evals.desplega.ai",

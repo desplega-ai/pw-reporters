@@ -43,7 +43,16 @@ const serializeResult = (result: TestResult) => ({
   errors: result.errors,
 });
 
-const serializeSuite = (suite: Suite) => ({
+type SerializedSuite = {
+  path: string[];
+  title: string;
+  type: "root" | "project" | "file" | "describe";
+  location: Suite["location"];
+  tests: string[];
+  suites: SerializedSuite[];
+};
+
+const serializeSuite = (suite: Suite): SerializedSuite => ({
   path: suite.titlePath(),
   title: suite.title,
   type: suite.type,
@@ -63,7 +72,6 @@ const serializeConfig = (config: FullConfig) => ({
     outputDir: p.outputDir,
     name: p.name,
     dependencies: p.dependencies,
-    testDir: p.testDir,
     metadata: p.metadata,
     use: p.use,
   })),
