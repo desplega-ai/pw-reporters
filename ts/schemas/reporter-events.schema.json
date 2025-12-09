@@ -53,13 +53,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "config",
-        "event",
-        "runId",
-        "suite",
-        "timestamp"
-      ],
+      "required": ["config", "event", "runId", "suite", "timestamp"],
       "type": "object"
     },
     "OnEndEvent": {
@@ -79,12 +73,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "event",
-        "result",
-        "runId",
-        "timestamp"
-      ],
+      "required": ["event", "result", "runId", "timestamp"],
       "type": "object"
     },
     "OnErrorEvent": {
@@ -104,12 +93,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "error",
-        "event",
-        "runId",
-        "timestamp"
-      ],
+      "required": ["error", "event", "runId", "timestamp"],
       "type": "object"
     },
     "OnExitEvent": {
@@ -126,11 +110,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "event",
-        "runId",
-        "timestamp"
-      ],
+      "required": ["event", "runId", "timestamp"],
       "type": "object"
     },
     "OnStdErrEvent": {
@@ -170,14 +150,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "chunk",
-        "event",
-        "result",
-        "runId",
-        "test",
-        "timestamp"
-      ],
+      "required": ["chunk", "event", "result", "runId", "test", "timestamp"],
       "type": "object"
     },
     "OnStdOutEvent": {
@@ -217,14 +190,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "chunk",
-        "event",
-        "result",
-        "runId",
-        "test",
-        "timestamp"
-      ],
+      "required": ["chunk", "event", "result", "runId", "test", "timestamp"],
       "type": "object"
     },
     "OnStepBeginEvent": {
@@ -250,14 +216,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "event",
-        "result",
-        "runId",
-        "step",
-        "test",
-        "timestamp"
-      ],
+      "required": ["event", "result", "runId", "step", "test", "timestamp"],
       "type": "object"
     },
     "OnStepEndEvent": {
@@ -283,14 +242,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "event",
-        "result",
-        "runId",
-        "step",
-        "test",
-        "timestamp"
-      ],
+      "required": ["event", "result", "runId", "step", "test", "timestamp"],
       "type": "object"
     },
     "OnTestBeginEvent": {
@@ -313,13 +265,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "event",
-        "result",
-        "runId",
-        "test",
-        "timestamp"
-      ],
+      "required": ["event", "result", "runId", "test", "timestamp"],
       "type": "object"
     },
     "OnTestEndEvent": {
@@ -342,13 +288,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "event",
-        "result",
-        "runId",
-        "test",
-        "timestamp"
-      ],
+      "required": ["event", "result", "runId", "test", "timestamp"],
       "type": "object"
     },
     "SerializedAnnotation": {
@@ -365,9 +305,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "type"
-      ],
+      "required": ["type"],
       "type": "object"
     },
     "SerializedAttachment": {
@@ -384,10 +322,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "name",
-        "contentType"
-      ],
+      "required": ["name", "contentType"],
       "type": "object"
     },
     "SerializedConfig": {
@@ -404,16 +339,10 @@
           "type": "boolean"
         },
         "globalSetup": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "globalTeardown": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "globalTimeout": {
           "type": "number"
@@ -444,11 +373,7 @@
           "$ref": "#/definitions/SerializedMetadata"
         },
         "preserveOutput": {
-          "enum": [
-            "always",
-            "never",
-            "failures-only"
-          ],
+          "enum": ["always", "never", "failures-only"],
           "type": "string"
         },
         "projects": {
@@ -472,10 +397,7 @@
                   "type": "number"
                 }
               },
-              "required": [
-                "max",
-                "threshold"
-              ],
+              "required": ["max", "threshold"],
               "type": "object"
             },
             {
@@ -498,10 +420,7 @@
                   "type": "number"
                 }
               },
-              "required": [
-                "total",
-                "current"
-              ],
+              "required": ["total", "current"],
               "type": "object"
             },
             {
@@ -510,12 +429,7 @@
           ]
         },
         "updateSnapshots": {
-          "enum": [
-            "all",
-            "changed",
-            "missing",
-            "none"
-          ],
+          "enum": ["all", "changed", "missing", "none"],
           "type": "string"
         },
         "version": {
@@ -558,20 +472,11 @@
           "type": "string"
         },
         "status": {
-          "enum": [
-            "passed",
-            "failed",
-            "timedout",
-            "interrupted"
-          ],
+          "enum": ["passed", "failed", "timedout", "interrupted"],
           "type": "string"
         }
       },
-      "required": [
-        "status",
-        "startTime",
-        "duration"
-      ],
+      "required": ["status", "startTime", "duration"],
       "type": "object"
     },
     "SerializedLocation": {
@@ -588,11 +493,7 @@
           "type": "number"
         }
       },
-      "required": [
-        "file",
-        "line",
-        "column"
-      ],
+      "required": ["file", "line", "column"],
       "type": "object"
     },
     "SerializedMetadata": {
@@ -715,22 +616,11 @@
           "type": "array"
         },
         "type": {
-          "enum": [
-            "root",
-            "project",
-            "file",
-            "describe"
-          ],
+          "enum": ["root", "project", "file", "describe"],
           "type": "string"
         }
       },
-      "required": [
-        "title",
-        "titlePath",
-        "type",
-        "suites",
-        "testIds"
-      ],
+      "required": ["title", "titlePath", "type", "suites", "testIds"],
       "type": "object"
     },
     "SerializedTestCase": {
@@ -756,12 +646,7 @@
           "type": "boolean"
         },
         "outcome": {
-          "enum": [
-            "skipped",
-            "expected",
-            "unexpected",
-            "flaky"
-          ],
+          "enum": ["skipped", "expected", "unexpected", "flaky"],
           "type": "string"
         },
         "repeatEachIndex": {
@@ -910,13 +795,7 @@
     },
     "SerializedTestStatus": {
       "description": "Test execution status",
-      "enum": [
-        "passed",
-        "failed",
-        "timedOut",
-        "skipped",
-        "interrupted"
-      ],
+      "enum": ["passed", "failed", "timedOut", "skipped", "interrupted"],
       "type": "string"
     },
     "SerializedTestStep": {
