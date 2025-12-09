@@ -1,5 +1,5 @@
 def main():
-    print("Hello from py!")
+    raise NotImplementedError("This is a placeholder for the main function.")
 
 
 if __name__ == "__main__":

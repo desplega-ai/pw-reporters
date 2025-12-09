@@ -1,104 +1,60 @@
-import json
+"""Minimal conftest for async Playwright + base_url."""
+
 import pytest
-from datetime import datetime
-from typing import Any
-from playwright.async_api import async_playwright, Page, Browser, BrowserContext
+from pathlib import Path
+from playwright.async_api import async_playwright, Page
 
-
-# Custom Reporter via pytest hooks
-class JSONReporter:
-    def __init__(self):
-        self.events: list[dict[str, Any]] = []
-
-    def log_event(self, event: str, data: dict[str, Any] | None = None):
-        payload = {"event": event, "timestamp": datetime.now().isoformat()}
-        if data:
-            payload.update(data)
-        print(json.dumps(payload, indent=2, default=str))
-
-
-reporter = JSONReporter()
-
-
-def pytest_sessionstart(session: pytest.Session):
-    reporter.log_event("onBegin", {
-        "rootdir": str(session.config.rootdir),
-        "args": session.config.args,
-    })
-
-
-def pytest_sessionfinish(session: pytest.Session, exitstatus: int):
-    reporter.log_event("onEnd", {
-        "exitstatus": exitstatus,
-        "testsfailed": session.testsfailed,
-        "testscollected": session.testscollected,
-    })
-
-
-def pytest_runtest_logstart(nodeid: str, location: tuple[str, int | None, str]):
-    reporter.log_event("onTestBegin", {
-        "test": {
-            "id": nodeid,
-            "location": {
-                "file": location[0],
-                "line": location[1],
-                "name": location[2],
-            }
-        }
-    })
-
-
-def pytest_runtest_logreport(report: pytest.TestReport):
-    if report.when == "call":
-        reporter.log_event("onTestEnd", {
-            "test": {
-                "id": report.nodeid,
-                "outcome": report.outcome,
-                "duration": report.duration,
-            },
-            "result": {
-                "status": report.outcome,
-                "duration": report.duration,
-            }
-        })
-        if report.failed:
-            reporter.log_event("onError", {
-                "error": str(report.longrepr) if report.longrepr else None,
-            })
-
-
-def pytest_runtest_makereport(item: pytest.Item, call: pytest.CallInfo):
-    if call.excinfo is not None:
-        reporter.log_event("onStepEnd", {
-            "step": {
-                "title": call.when,
-                "duration": call.duration,
-                "error": str(call.excinfo.value),
-            }
-        })
-
-
-# Async Playwright fixtures
 BASE_URL = "https://evals.desplega.ai"
+ARTIFACTS_DIR = Path("test-results")
 
 
 @pytest.fixture
-async def page():
+async def page(request) -> Page:  # type: ignore
+    ARTIFACTS_DIR.mkdir(exist_ok=True)
+    test_name = request.node.name
+
     async with async_playwright() as p:
+        # browser = await p.chromium.connect("ws://localhost:3003")
         browser = await p.chromium.launch()
-        context = await browser.new_context()
+
+        # Create context with HAR and video recording
+        context = await browser.new_context(
+            base_url=BASE_URL,
+            record_har_path=ARTIFACTS_DIR / f"{test_name}.har",
+            record_video_dir=ARTIFACTS_DIR,
+        )
+
+        # Start tracing
+        await context.tracing.start(screenshots=True, snapshots=True, sources=True)
+
         page = await context.new_page()
 
-        # Monkey-patch goto to support relative URLs
-        original_goto = page.goto
-        async def goto_with_base(url: str, **kwargs):
-            if url.startswith("/"):
-                url = BASE_URL + url
-            return await original_goto(url, **kwargs)
-        page.goto = goto_with_base
+        yield page  # type: ignore
 
-        yield page
+        # Save trace
+        await context.tracing.stop(path=ARTIFACTS_DIR / f"{test_name}.zip")
 
+        # Screenshot on failure
+        if hasattr(request.node, "rep_call") and request.node.rep_call.failed:
+            await page.screenshot(path=ARTIFACTS_DIR / f"{test_name}-failed.png")
+
+        # Get video reference before closing page
+        video = page.video
+
+        # Close page to finalize the video
         await page.close()
+
+        # Save video from remote browser (after page is closed)
+        if video:
+            await video.save_as(ARTIFACTS_DIR / f"{test_name}.webm")
+
         await context.close()
         await browser.close()
+
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    """Store test result on the item for the fixture to access."""
+    outcome = yield
+    rep = outcome.get_result()
+    setattr(item, f"rep_{rep.when}", rep)

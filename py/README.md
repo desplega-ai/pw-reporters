@@ -1,13 +1,19 @@
-# Python Playwright
+# desplega.ai Python Playwright reporter
 
-## Setup
+> This project is work in progress...
+
+## Development
 
 ```sh
 uv sync
 ```
 
-## Run tests
+### Run Playwright tests
 
 ```sh
 uv run pytest
 ```
+
+## License
+
+MIT License. See the [LICENSE](LICENSE) file for details.
