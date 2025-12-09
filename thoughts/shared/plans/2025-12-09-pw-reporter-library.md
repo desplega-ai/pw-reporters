@@ -22,22 +22,25 @@ Create an npm package `@org/pw-reporter` that streams test events via WebSocket 
 
 ### 2. Library Structure
 
+**Note:** No separate package.json in ts/lib/ - use root ts/package.json to avoid workspaces complexity.
+
 ```
-ts/lib/
-├── package.json
-├── tsconfig.json
-├── src/
-│   ├── index.ts              # Default export of reporter class
-│   ├── reporter.ts           # Main Reporter implementation
-│   ├── types.ts              # TypeScript interfaces
-│   ├── serializers.ts        # Serialize Playwright objects (port from existing)
-│   ├── websocket/
-│   │   ├── client.ts         # WS client with reconnection
-│   │   └── message-queue.ts  # Buffer during disconnection
-│   └── uploader/
-│       ├── index.ts          # Upload orchestrator
-│       ├── file-scanner.ts   # Scan test-results/
-│       └── http-uploader.ts  # HTTP upload with retry/chunking
+ts/
+├── package.json              # Root package - manages all dependencies
+├── tsconfig.json             # TypeScript config
+├── lib/
+│   └── src/
+│       ├── index.ts          # Exports reporter class + types + serializers
+│       ├── reporter.ts       # Main Reporter implementation
+│       ├── types.ts          # TypeScript interfaces
+│       ├── serializers.ts    # Serialize Playwright objects (port from existing)
+│       ├── websocket/
+│       │   ├── client.ts     # WS client with reconnection
+│       │   └── message-queue.ts  # Buffer during disconnection
+│       └── uploader/
+│           ├── index.ts      # Upload orchestrator
+│           ├── file-scanner.ts   # Scan test-results/
+│           └── http-uploader.ts  # HTTP upload with retry/chunking
 └── dist/                     # Compiled output
 ```
 
@@ -98,34 +101,36 @@ interface ReporterConfig {
 ## Implementation Steps
 
 ### Phase 1: Package Setup
-- [ ] Create `ts/lib/` directory structure
-- [ ] Set up `package.json` with tsup build, peer dependency on `@playwright/test`
-- [ ] Create `tsconfig.json`
-- [ ] Create `src/types.ts` with all interfaces
+- [x] Create `ts/lib/src/` directory structure
+- [x] Root `ts/package.json` already configured with build scripts, peer dependency on `@playwright/test`
+- [x] Root `ts/tsconfig.json` already configured
+- [x] Create `lib/src/types.ts` with all interfaces
+
+**Note:** No separate package.json/tsconfig.json in ts/lib/ - using root ts/package.json to avoid workspaces.
 
 ### Phase 2: Port Existing Code
-- [ ] Port serializers from `ts/reporter.ts` to `src/serializers.ts`
+- [x] Port serializers from `ts/example-reporter.ts` to `lib/src/serializers.ts`
   - **See detailed plan**: [`2025-12-09-json-serialization-layer.md`](./2025-12-09-json-serialization-layer.md)
-- [ ] Create basic reporter skeleton in `src/reporter.ts`
+- [ ] Create basic reporter skeleton in `lib/src/reporter.ts`
 
 ### Phase 3: WebSocket Client
-- [ ] Implement `src/websocket/client.ts` with:
+- [ ] Implement `lib/src/websocket/client.ts` with:
   - Connection with auth header (`Authorization: Bearer {apiKey}`)
   - Reconnection with exponential backoff + jitter
   - Message queue for buffering
-- [ ] Implement `src/websocket/message-queue.ts`
+- [ ] Implement `lib/src/websocket/message-queue.ts`
 
 ### Phase 4: File Uploader
-- [ ] Implement `src/uploader/file-scanner.ts` - recursive scan with glob patterns
-- [ ] Implement `src/uploader/http-uploader.ts`:
+- [ ] Implement `lib/src/uploader/file-scanner.ts` - recursive scan with glob patterns
+- [ ] Implement `lib/src/uploader/http-uploader.ts`:
   - Multipart form upload
   - Chunking for large files
   - Retry with exponential backoff
-- [ ] Implement `src/uploader/index.ts` - orchestrator with concurrency control
+- [ ] Implement `lib/src/uploader/index.ts` - orchestrator with concurrency control
 
 ### Phase 5: Integration
-- [ ] Wire everything together in `src/reporter.ts`
-- [ ] Create `src/index.ts` with default export
+- [ ] Wire everything together in `lib/src/reporter.ts`
+- [ ] Update `lib/src/index.ts` with default export of reporter class
 - [ ] Update `ts/playwright.config.ts` to use the new library
 
 ### Phase 6: Testing & Polish
@@ -139,12 +144,12 @@ interface ReporterConfig {
 
 | File | Action |
 |------|--------|
-| `ts/lib/package.json` | Create |
-| `ts/lib/tsconfig.json` | Create |
-| `ts/lib/src/index.ts` | Create |
+| `ts/package.json` | Already exists - root package |
+| `ts/tsconfig.json` | Already exists |
+| `ts/lib/src/index.ts` | Exists - update to export reporter |
 | `ts/lib/src/reporter.ts` | Create |
-| `ts/lib/src/types.ts` | Create |
-| `ts/lib/src/serializers.ts` | Create (port from ts/reporter.ts) |
+| `ts/lib/src/types.ts` | Exists |
+| `ts/lib/src/serializers.ts` | Exists |
 | `ts/lib/src/websocket/client.ts` | Create |
 | `ts/lib/src/websocket/message-queue.ts` | Create |
 | `ts/lib/src/uploader/index.ts` | Create |
@@ -156,6 +161,6 @@ interface ReporterConfig {
 
 ## Reference Files
 
-- `ts/reporter.ts` - Existing serializers to port
-- `ts/ws.ts` - Local WS server for testing
+- `ts/example-reporter.ts` - Existing reporter to replace
+- `ts/ws.ts` - Local WS server for testing (needs to be created)
 - `ts/playwright.config.ts` - Current config pattern
