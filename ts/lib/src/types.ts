@@ -13,6 +13,13 @@
 // ============================================
 
 /**
+ * Generic metadata object for arbitrary key-value pairs
+ */
+export interface SerializedMetadata {
+  [key: string]: unknown;
+}
+
+/**
  * Test execution status
  */
 export type SerializedTestStatus =
@@ -150,7 +157,7 @@ export interface SerializedProject {
   timeout: number;
   dependencies: string[];
   teardown?: string;
-  metadata: Record<string, unknown>;
+  metadata: SerializedMetadata;
   // grep/grepInvert/testIgnore/testMatch - RegExp converted to strings
   grep: string[];
   grepInvert: string[] | null;
@@ -176,7 +183,7 @@ export interface SerializedConfig {
   maxFailures: number;
   preserveOutput: "always" | "never" | "failures-only";
   updateSnapshots: "all" | "changed" | "missing" | "none";
-  metadata: Record<string, unknown>;
+  metadata: SerializedMetadata;
   grep: string[];
   grepInvert: string[] | null;
   shard: { total: number; current: number } | null;

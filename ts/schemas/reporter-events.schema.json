@@ -1,0 +1,983 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "anyOf": [
+    {
+      "$ref": "#/definitions/OnBeginEvent"
+    },
+    {
+      "$ref": "#/definitions/OnTestBeginEvent"
+    },
+    {
+      "$ref": "#/definitions/OnTestEndEvent"
+    },
+    {
+      "$ref": "#/definitions/OnStepBeginEvent"
+    },
+    {
+      "$ref": "#/definitions/OnStepEndEvent"
+    },
+    {
+      "$ref": "#/definitions/OnErrorEvent"
+    },
+    {
+      "$ref": "#/definitions/OnEndEvent"
+    },
+    {
+      "$ref": "#/definitions/OnStdOutEvent"
+    },
+    {
+      "$ref": "#/definitions/OnStdErrEvent"
+    },
+    {
+      "$ref": "#/definitions/OnExitEvent"
+    }
+  ],
+  "definitions": {
+    "OnBeginEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "config": {
+          "$ref": "#/definitions/SerializedConfig"
+        },
+        "event": {
+          "const": "onBegin",
+          "type": "string"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "suite": {
+          "$ref": "#/definitions/SerializedSuite"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "config",
+        "event",
+        "runId",
+        "suite",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "OnEndEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "event": {
+          "const": "onEnd",
+          "type": "string"
+        },
+        "result": {
+          "$ref": "#/definitions/SerializedFullResult"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event",
+        "result",
+        "runId",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "OnErrorEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/SerializedTestError"
+        },
+        "event": {
+          "const": "onError",
+          "type": "string"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "error",
+        "event",
+        "runId",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "OnExitEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "event": {
+          "const": "onExit",
+          "type": "string"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event",
+        "runId",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "OnStdErrEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "chunk": {
+          "type": "string"
+        },
+        "event": {
+          "const": "onStdErr",
+          "type": "string"
+        },
+        "result": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SerializedTestResult"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "runId": {
+          "type": "string"
+        },
+        "test": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SerializedTestCase"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "chunk",
+        "event",
+        "result",
+        "runId",
+        "test",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "OnStdOutEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "chunk": {
+          "type": "string"
+        },
+        "event": {
+          "const": "onStdOut",
+          "type": "string"
+        },
+        "result": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SerializedTestResult"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "runId": {
+          "type": "string"
+        },
+        "test": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SerializedTestCase"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "chunk",
+        "event",
+        "result",
+        "runId",
+        "test",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "OnStepBeginEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "event": {
+          "const": "onStepBegin",
+          "type": "string"
+        },
+        "result": {
+          "$ref": "#/definitions/SerializedTestResult"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "step": {
+          "$ref": "#/definitions/SerializedTestStep"
+        },
+        "test": {
+          "$ref": "#/definitions/SerializedTestCase"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event",
+        "result",
+        "runId",
+        "step",
+        "test",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "OnStepEndEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "event": {
+          "const": "onStepEnd",
+          "type": "string"
+        },
+        "result": {
+          "$ref": "#/definitions/SerializedTestResult"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "step": {
+          "$ref": "#/definitions/SerializedTestStep"
+        },
+        "test": {
+          "$ref": "#/definitions/SerializedTestCase"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event",
+        "result",
+        "runId",
+        "step",
+        "test",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "OnTestBeginEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "event": {
+          "const": "onTestBegin",
+          "type": "string"
+        },
+        "result": {
+          "$ref": "#/definitions/SerializedTestResult"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "test": {
+          "$ref": "#/definitions/SerializedTestCase"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event",
+        "result",
+        "runId",
+        "test",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "OnTestEndEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "event": {
+          "const": "onTestEnd",
+          "type": "string"
+        },
+        "result": {
+          "$ref": "#/definitions/SerializedTestResult"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "test": {
+          "$ref": "#/definitions/SerializedTestCase"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event",
+        "result",
+        "runId",
+        "test",
+        "timestamp"
+      ],
+      "type": "object"
+    },
+    "SerializedAnnotation": {
+      "additionalProperties": false,
+      "description": "Test annotation (skip, fail, fixme, etc.)",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/definitions/SerializedLocation"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "SerializedAttachment": {
+      "additionalProperties": false,
+      "description": "Test attachment (screenshot, video, trace, etc.) Note: `body` is omitted for streaming - files uploaded separately via HTTP",
+      "properties": {
+        "contentType": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "contentType"
+      ],
+      "type": "object"
+    },
+    "SerializedConfig": {
+      "additionalProperties": false,
+      "description": "Full Playwright configuration",
+      "properties": {
+        "configFile": {
+          "type": "string"
+        },
+        "forbidOnly": {
+          "type": "boolean"
+        },
+        "fullyParallel": {
+          "type": "boolean"
+        },
+        "globalSetup": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "globalTeardown": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "globalTimeout": {
+          "type": "number"
+        },
+        "grep": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "grepInvert": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "maxFailures": {
+          "type": "number"
+        },
+        "metadata": {
+          "$ref": "#/definitions/SerializedMetadata"
+        },
+        "preserveOutput": {
+          "enum": [
+            "always",
+            "never",
+            "failures-only"
+          ],
+          "type": "string"
+        },
+        "projects": {
+          "items": {
+            "$ref": "#/definitions/SerializedProject"
+          },
+          "type": "array"
+        },
+        "quiet": {
+          "type": "boolean"
+        },
+        "reportSlowTests": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "max": {
+                  "type": "number"
+                },
+                "threshold": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "max",
+                "threshold"
+              ],
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rootDir": {
+          "type": "string"
+        },
+        "shard": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "current": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "total",
+                "current"
+              ],
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "updateSnapshots": {
+          "enum": [
+            "all",
+            "changed",
+            "missing",
+            "none"
+          ],
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "workers": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "rootDir",
+        "version",
+        "workers",
+        "forbidOnly",
+        "fullyParallel",
+        "quiet",
+        "globalSetup",
+        "globalTeardown",
+        "globalTimeout",
+        "maxFailures",
+        "preserveOutput",
+        "updateSnapshots",
+        "metadata",
+        "grep",
+        "grepInvert",
+        "shard",
+        "reportSlowTests",
+        "projects"
+      ],
+      "type": "object"
+    },
+    "SerializedFullResult": {
+      "additionalProperties": false,
+      "description": "Final test run result",
+      "properties": {
+        "duration": {
+          "type": "number"
+        },
+        "startTime": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "passed",
+            "failed",
+            "timedout",
+            "interrupted"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "startTime",
+        "duration"
+      ],
+      "type": "object"
+    },
+    "SerializedLocation": {
+      "additionalProperties": false,
+      "description": "Source code location",
+      "properties": {
+        "column": {
+          "type": "number"
+        },
+        "file": {
+          "type": "string"
+        },
+        "line": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "file",
+        "line",
+        "column"
+      ],
+      "type": "object"
+    },
+    "SerializedMetadata": {
+      "additionalProperties": {},
+      "description": "Generic metadata object for arbitrary key-value pairs",
+      "type": "object"
+    },
+    "SerializedProject": {
+      "additionalProperties": false,
+      "description": "Project configuration",
+      "properties": {
+        "dependencies": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "grep": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "grepInvert": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "metadata": {
+          "$ref": "#/definitions/SerializedMetadata"
+        },
+        "name": {
+          "type": "string"
+        },
+        "outputDir": {
+          "type": "string"
+        },
+        "repeatEach": {
+          "type": "number"
+        },
+        "retries": {
+          "type": "number"
+        },
+        "snapshotDir": {
+          "type": "string"
+        },
+        "teardown": {
+          "type": "string"
+        },
+        "testDir": {
+          "type": "string"
+        },
+        "testIgnore": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "testMatch": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "timeout": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "name",
+        "testDir",
+        "outputDir",
+        "snapshotDir",
+        "repeatEach",
+        "retries",
+        "timeout",
+        "dependencies",
+        "metadata",
+        "grep",
+        "grepInvert",
+        "testIgnore",
+        "testMatch"
+      ],
+      "type": "object"
+    },
+    "SerializedSuite": {
+      "additionalProperties": false,
+      "description": "Test suite (file, describe block, project, or root)",
+      "properties": {
+        "location": {
+          "$ref": "#/definitions/SerializedLocation"
+        },
+        "suites": {
+          "items": {
+            "$ref": "#/definitions/SerializedSuite"
+          },
+          "type": "array"
+        },
+        "testIds": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "title": {
+          "type": "string"
+        },
+        "titlePath": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "type": {
+          "enum": [
+            "root",
+            "project",
+            "file",
+            "describe"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "titlePath",
+        "type",
+        "suites",
+        "testIds"
+      ],
+      "type": "object"
+    },
+    "SerializedTestCase": {
+      "additionalProperties": false,
+      "description": "Test case definition",
+      "properties": {
+        "annotations": {
+          "items": {
+            "$ref": "#/definitions/SerializedAnnotation"
+          },
+          "type": "array"
+        },
+        "expectedStatus": {
+          "$ref": "#/definitions/SerializedTestStatus"
+        },
+        "id": {
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/definitions/SerializedLocation"
+        },
+        "ok": {
+          "type": "boolean"
+        },
+        "outcome": {
+          "enum": [
+            "skipped",
+            "expected",
+            "unexpected",
+            "flaky"
+          ],
+          "type": "string"
+        },
+        "repeatEachIndex": {
+          "type": "number"
+        },
+        "retries": {
+          "type": "number"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "timeout": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "titlePath": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "titlePath",
+        "location",
+        "tags",
+        "timeout",
+        "retries",
+        "repeatEachIndex",
+        "expectedStatus",
+        "annotations",
+        "outcome",
+        "ok"
+      ],
+      "type": "object"
+    },
+    "SerializedTestError": {
+      "additionalProperties": false,
+      "description": "Test error with stack trace",
+      "properties": {
+        "cause": {
+          "$ref": "#/definitions/SerializedTestError"
+        },
+        "location": {
+          "$ref": "#/definitions/SerializedLocation"
+        },
+        "message": {
+          "type": "string"
+        },
+        "snippet": {
+          "type": "string"
+        },
+        "stack": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SerializedTestResult": {
+      "additionalProperties": false,
+      "description": "Test result from a single run attempt",
+      "properties": {
+        "annotations": {
+          "items": {
+            "$ref": "#/definitions/SerializedAnnotation"
+          },
+          "type": "array"
+        },
+        "attachments": {
+          "items": {
+            "$ref": "#/definitions/SerializedAttachment"
+          },
+          "type": "array"
+        },
+        "duration": {
+          "type": "number"
+        },
+        "error": {
+          "$ref": "#/definitions/SerializedTestError"
+        },
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/SerializedTestError"
+          },
+          "type": "array"
+        },
+        "parallelIndex": {
+          "type": "number"
+        },
+        "retry": {
+          "type": "number"
+        },
+        "startTime": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/SerializedTestStatus"
+        },
+        "stderr": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "stdout": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "steps": {
+          "items": {
+            "$ref": "#/definitions/SerializedTestStep"
+          },
+          "type": "array"
+        },
+        "workerIndex": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "status",
+        "duration",
+        "startTime",
+        "retry",
+        "workerIndex",
+        "parallelIndex",
+        "errors",
+        "stdout",
+        "stderr",
+        "steps",
+        "attachments",
+        "annotations"
+      ],
+      "type": "object"
+    },
+    "SerializedTestStatus": {
+      "description": "Test execution status",
+      "enum": [
+        "passed",
+        "failed",
+        "timedOut",
+        "skipped",
+        "interrupted"
+      ],
+      "type": "string"
+    },
+    "SerializedTestStep": {
+      "additionalProperties": false,
+      "description": "Test step (action, assertion, hook, etc.) Full recursive structure preserved",
+      "properties": {
+        "annotations": {
+          "items": {
+            "$ref": "#/definitions/SerializedAnnotation"
+          },
+          "type": "array"
+        },
+        "attachments": {
+          "items": {
+            "$ref": "#/definitions/SerializedAttachment"
+          },
+          "type": "array"
+        },
+        "category": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "number"
+        },
+        "error": {
+          "$ref": "#/definitions/SerializedTestError"
+        },
+        "location": {
+          "$ref": "#/definitions/SerializedLocation"
+        },
+        "startTime": {
+          "type": "string"
+        },
+        "steps": {
+          "items": {
+            "$ref": "#/definitions/SerializedTestStep"
+          },
+          "type": "array"
+        },
+        "title": {
+          "type": "string"
+        },
+        "titlePath": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "title",
+        "titlePath",
+        "category",
+        "duration",
+        "startTime",
+        "annotations",
+        "attachments",
+        "steps"
+      ],
+      "type": "object"
+    }
+  },
+  "description": "Union of all event types"
+}
