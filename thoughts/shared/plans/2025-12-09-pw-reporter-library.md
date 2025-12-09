@@ -111,31 +111,31 @@ interface ReporterConfig {
 ### Phase 2: Port Existing Code
 - [x] Port serializers from `ts/example-reporter.ts` to `lib/src/serializers.ts`
   - **See detailed plan**: [`2025-12-09-json-serialization-layer.md`](./2025-12-09-json-serialization-layer.md)
-- [ ] Create basic reporter skeleton in `lib/src/reporter.ts`
+- [x] Create basic reporter skeleton in `lib/src/reporter.ts`
 
 ### Phase 3: WebSocket Client
-- [ ] Implement `lib/src/websocket/client.ts` with:
+- [x] Implement `lib/src/websocket/client.ts` with:
   - Connection with auth header (`Authorization: Bearer {apiKey}`)
   - Reconnection with exponential backoff + jitter
   - Message queue for buffering
-- [ ] Implement `lib/src/websocket/message-queue.ts`
+- [x] Implement `lib/src/websocket/message-queue.ts`
 
 ### Phase 4: File Uploader
-- [ ] Implement `lib/src/uploader/file-scanner.ts` - recursive scan with glob patterns
-- [ ] Implement `lib/src/uploader/http-uploader.ts`:
+- [x] Implement `lib/src/uploader/file-scanner.ts` - recursive scan with glob patterns
+- [x] Implement `lib/src/uploader/http-uploader.ts`:
   - Multipart form upload
   - Chunking for large files
   - Retry with exponential backoff
-- [ ] Implement `lib/src/uploader/index.ts` - orchestrator with concurrency control
+- [x] Implement `lib/src/uploader/index.ts` - orchestrator with concurrency control
 
 ### Phase 5: Integration
-- [ ] Wire everything together in `lib/src/reporter.ts`
-- [ ] Update `lib/src/index.ts` with default export of reporter class
-- [ ] Update `ts/playwright.config.ts` to use the new library
+- [x] Wire everything together in `lib/src/reporter.ts`
+- [x] Update `lib/src/index.ts` with default export of reporter class
+- [x] Update `ts/playwright.config.ts` to use the new library
 
 ### Phase 6: Testing & Polish
 - [ ] Test with local WebSocket server (`ts/ws.ts`)
-- [ ] Add debug logging
+- [x] Add debug logging
 - [ ] Write README
 
 ---

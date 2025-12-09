@@ -1,3 +1,8 @@
+// Reporter (default export)
+export { default } from "./reporter";
+export { default as PlaywrightReporter } from "./reporter";
+export type { ReporterConfig } from "./reporter";
+
 // Types
 export type {
   SerializedTestStatus,
