@@ -111,6 +111,8 @@ class PlaywrightReporter implements Reporter {
   private initialized = false;
   /** Map from absolute attachment path -> test.id */
   private attachmentTestMap: Map<string, string> = new Map();
+  /** Output directory for test artifacts (from Playwright config) */
+  private outputDir: string = "test-results";
 
   constructor(config: ReporterConfig = {}) {
     this.config = config;
@@ -125,7 +127,9 @@ class PlaywrightReporter implements Reporter {
    */
   private resolveConfig(config: ReporterConfig): ResolvedConfig {
     const endpoint =
-      process.env.DESPLEGA_ENDPOINT ?? config.endpoint ?? "api.desplega.ai/pw-reporter";
+      process.env.DESPLEGA_ENDPOINT ??
+      config.endpoint ??
+      "api.desplega.ai/pw-reporter";
 
     const apiKey = process.env.DESPLEGA_API_KEY ?? config.apiKey ?? "";
 
@@ -274,7 +278,7 @@ class PlaywrightReporter implements Reporter {
       return;
     }
     this.wsClient.send(event);
-    this.log("Sent event:", event.event);
+    // this.log("Sent event:", event.event);
   }
 
   printsToStdio(): boolean {
@@ -282,6 +286,13 @@ class PlaywrightReporter implements Reporter {
   }
 
   async onBegin(config: FullConfig, suite: Suite): Promise<void> {
+    // Extract outputDir from first project (all projects typically share the same outputDir)
+    const firstProject = config.projects[0];
+    if (firstProject) {
+      this.outputDir = firstProject.outputDir;
+      this.log("Output directory:", this.outputDir);
+    }
+
     // Perform health check before initializing
     const healthy = await this.performHealthCheck();
     if (!healthy) {
@@ -316,6 +327,9 @@ class PlaywrightReporter implements Reporter {
     // Track attachment -> test.id mapping for accurate file uploads
     for (const attachment of result.attachments) {
       if (attachment.path) {
+        this.log(
+          `Mapping attachment to test: ${attachment.path} -> ${test.id}`,
+        );
         this.attachmentTestMap.set(attachment.path, test.id);
       }
     }
@@ -402,8 +416,8 @@ class PlaywrightReporter implements Reporter {
 
     // Build manifest of files to upload
     if (this.uploader) {
-      this.log("Scanning test-results for files to upload...");
-      await this.uploader.scanFiles("test-results");
+      this.log(`Scanning ${this.outputDir} for files to upload...`);
+      await this.uploader.scanFiles(this.outputDir);
       // Enrich files with testId for accurate backend matching
       this.uploader.enrichWithTestIds(this.attachmentTestMap);
     }

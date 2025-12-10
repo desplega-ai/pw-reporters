@@ -63,9 +63,17 @@ async function main() {
   }
   console.log("   Server started on port", SERVER_PORT);
 
-  // Run Playwright tests
+  // Run Playwright tests with env vars pointing to our test server
+  // Note: DESPLEGA_ENDPOINT should NOT include /pw-reporter since the test server
+  // uses root-level endpoints (/health, /upload, /ws)
   console.log("\n2. Running Playwright tests...");
-  const testResult = await Bun.$`bun run pw:test --project=base`
+  const testResult = await Bun.$`bun run pw:test`
+    .env({
+      ...process.env,
+      DESPLEGA_ENDPOINT: `localhost:${SERVER_PORT}`,
+      DESPLEGA_SECURE: "false",
+      DESPLEGA_DEBUG: "true",
+    })
     .quiet()
     .nothrow();
 
@@ -85,7 +93,7 @@ async function main() {
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
-    summary = await response.json();
+    summary = (await response.json()) as RunSummary;
   } catch (err) {
     console.error("   ERROR: Failed to fetch summary:", err);
     server.kill();
@@ -95,6 +103,9 @@ async function main() {
   // Stop the server
   server.kill();
   console.log("   Server stopped");
+
+  console.log("   Summary fetched successfully");
+  console.log(JSON.stringify(summary, null, 2));
 
   // Validate summary
   console.log("\n4. Verifying summary...");

@@ -40,16 +40,16 @@ schemas/
 
 ## Available Scripts
 
-| Script | Description |
-|--------|-------------|
-| `bun test` | Run library unit tests |
-| `bun run pw:test` | Run Playwright tests |
-| `bun run pw:test:ui` | Run Playwright with UI mode |
-| `bun run pw:test:headed` | Run Playwright in headed mode |
-| `bun run typecheck` | Run TypeScript type checking |
-| `bun run format` | Format code with Prettier |
-| `bun run build` | Build library for publishing |
-| `bun run e2e:test` | Run end-to-end tests |
+| Script                    | Description                       |
+| ------------------------- | --------------------------------- |
+| `bun test`                | Run library unit tests            |
+| `bun run pw:test`         | Run Playwright tests              |
+| `bun run pw:test:ui`      | Run Playwright with UI mode       |
+| `bun run pw:test:headed`  | Run Playwright in headed mode     |
+| `bun run typecheck`       | Run TypeScript type checking      |
+| `bun run format`          | Format code with Prettier         |
+| `bun run build`           | Build library for publishing      |
+| `bun run e2e:test`        | Run end-to-end tests              |
 | `bun run generate-schema` | Regenerate JSON schema from types |
 
 ## Publishing
@@ -116,9 +116,9 @@ cp .env.example .env
 
 Configure the following for local development:
 
-| Variable | Description |
-|----------|-------------|
+| Variable            | Description                                              |
+| ------------------- | -------------------------------------------------------- |
 | `DESPLEGA_ENDPOINT` | Server endpoint (default: `api.desplega.ai/pw-reporter`) |
-| `DESPLEGA_API_KEY` | API key for authentication |
-| `DESPLEGA_SECURE` | Use secure connections (`false` for local) |
-| `DESPLEGA_DEBUG` | Enable debug logging (`true` for development) |
+| `DESPLEGA_API_KEY`  | API key for authentication                               |
+| `DESPLEGA_SECURE`   | Use secure connections (`false` for local)               |
+| `DESPLEGA_DEBUG`    | Enable debug logging (`true` for development)            |

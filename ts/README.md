@@ -18,9 +18,7 @@ Add the reporter to your `playwright.config.ts`:
 import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  reporter: [
-    ["@desplega.ai/playwright-reporter"],
-  ],
+  reporter: [["@desplega.ai/playwright-reporter"]],
   // Enable these options to capture recordings, logs, and traces
   use: {
     trace: "on",
@@ -45,12 +43,12 @@ The reporter can be configured via environment variables or inline config. Envir
 
 ### Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
+| Variable            | Description                                         | Default                       |
+| ------------------- | --------------------------------------------------- | ----------------------------- |
 | `DESPLEGA_ENDPOINT` | Base endpoint (e.g., `api.desplega.ai/pw-reporter`) | `api.desplega.ai/pw-reporter` |
-| `DESPLEGA_API_KEY` | API key for authentication | - |
-| `DESPLEGA_SECURE` | Use secure connections (`true`/`false`) | `true` for non-localhost |
-| `DESPLEGA_DEBUG` | Enable debug logging (`true`/`false`) | `false` |
+| `DESPLEGA_API_KEY`  | API key for authentication                          | -                             |
+| `DESPLEGA_SECURE`   | Use secure connections (`true`/`false`)             | `true` for non-localhost      |
+| `DESPLEGA_DEBUG`    | Enable debug logging (`true`/`false`)               | `false`                       |
 
 ### Inline Configuration
 
@@ -87,20 +85,20 @@ export default defineConfig({
 
 ### Configuration Options
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `endpoint` | `string` | Base endpoint without protocol |
-| `apiKey` | `string` | API key for authentication |
-| `secure` | `boolean` | Use wss/https (default: true for non-localhost) |
-| `debug` | `boolean` | Enable debug logging |
-| `reconnect.enabled` | `boolean` | Enable auto-reconnection (default: true) |
-| `reconnect.maxAttempts` | `number` | Max reconnection attempts (default: 10) |
-| `reconnect.initialDelayMs` | `number` | Initial retry delay (default: 1000) |
-| `reconnect.maxDelayMs` | `number` | Max retry delay (default: 30000) |
-| `upload.enabled` | `boolean` | Enable file uploads (default: true) |
-| `upload.parallel` | `number` | Parallel upload count (default: 3) |
-| `upload.chunkSizeMb` | `number` | Chunk size for large files (default: 5) |
-| `upload.retries` | `number` | Upload retry attempts (default: 3) |
+| Option                     | Type      | Description                                     |
+| -------------------------- | --------- | ----------------------------------------------- |
+| `endpoint`                 | `string`  | Base endpoint without protocol                  |
+| `apiKey`                   | `string`  | API key for authentication                      |
+| `secure`                   | `boolean` | Use wss/https (default: true for non-localhost) |
+| `debug`                    | `boolean` | Enable debug logging                            |
+| `reconnect.enabled`        | `boolean` | Enable auto-reconnection (default: true)        |
+| `reconnect.maxAttempts`    | `number`  | Max reconnection attempts (default: 10)         |
+| `reconnect.initialDelayMs` | `number`  | Initial retry delay (default: 1000)             |
+| `reconnect.maxDelayMs`     | `number`  | Max retry delay (default: 30000)                |
+| `upload.enabled`           | `boolean` | Enable file uploads (default: true)             |
+| `upload.parallel`          | `number`  | Parallel upload count (default: 3)              |
+| `upload.chunkSizeMb`       | `number`  | Chunk size for large files (default: 5)         |
+| `upload.retries`           | `number`  | Upload retry attempts (default: 3)              |
 
 ## Features
 

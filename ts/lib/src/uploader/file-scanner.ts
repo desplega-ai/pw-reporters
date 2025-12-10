@@ -1,5 +1,5 @@
 import { readdir, stat } from "node:fs/promises";
-import { join } from "node:path";
+import { join, resolve } from "node:path";
 
 export interface FileInfo {
   /** Absolute path to the file */
@@ -40,9 +40,11 @@ export class FileScanner {
    */
   async scan(rootPath: string): Promise<FileInfo[]> {
     const files: FileInfo[] = [];
+    // Resolve to absolute path for consistent matching with attachment paths
+    const absoluteRoot = resolve(rootPath);
 
     try {
-      await this.scanDirectory(rootPath, rootPath, files);
+      await this.scanDirectory(absoluteRoot, absoluteRoot, files);
     } catch (error) {
       // Directory might not exist (no test artifacts)
       if ((error as NodeJS.ErrnoException).code === "ENOENT") {

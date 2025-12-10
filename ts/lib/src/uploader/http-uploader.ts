@@ -111,6 +111,10 @@ export class HttpUploader {
       formData.append("testId", file.testId);
     }
 
+    this.log(
+      `Uploading ${file.relativePath} (${file.size} bytes) - [runId: ${runId} | testId: ${file.testId}]`,
+    );
+
     const response = await fetch(this.config.endpoint, {
       method: "POST",
       headers: {
@@ -132,7 +136,7 @@ export class HttpUploader {
     const uploadId = `${runId}_${Date.now()}_${Math.random().toString(36).slice(2)}`;
 
     this.log(
-      `Uploading ${file.relativePath} in ${totalChunks} chunks (${file.size} bytes)`,
+      `Chunked upload of ${file.relativePath} (${file.size} bytes | ${totalChunks} chunks) - [runId: ${runId} | testId: ${file.testId}]`,
     );
 
     for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {

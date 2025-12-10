@@ -164,7 +164,6 @@ export class FileUploader {
       const testId = attachmentTestMap.get(file.path);
       if (testId) {
         file.testId = testId;
-        this.log(`Enriched ${file.relativePath} with testId: ${testId}`);
       }
     }
   }

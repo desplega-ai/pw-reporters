@@ -233,7 +233,7 @@ export class WebSocketClient {
    */
   send(message: ReporterEvent): void {
     if (this.state === "connected" && this.sendImmediate(message)) {
-      this.log("Sent:", message.event);
+      // this.log("Sent:", message.event);
       return;
     }
 
