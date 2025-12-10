@@ -41,7 +41,7 @@ import { FileUploader } from "./uploader/index";
  *
  * All options can be set via environment variables prefixed with DESPLEGA_:
  * - DESPLEGA_API_KEY: API key for authentication
- * - DESPLEGA_ENDPOINT: Base endpoint (e.g., 'localhost:5555' or 'api.example.com')
+ * - DESPLEGA_ENDPOINT: Base endpoint (e.g., 'api.desplega.ai/pw-reporter')
  * - DESPLEGA_SECURE: Use secure connections (wss/https) - 'true' or 'false'
  * - DESPLEGA_DEBUG: Enable debug logging - 'true' or 'false'
  *
@@ -50,7 +50,7 @@ import { FileUploader } from "./uploader/index";
 export interface ReporterConfig {
   /** API key for authentication (env: DESPLEGA_API_KEY) */
   apiKey?: string;
-  /** Base endpoint without protocol (e.g., 'localhost:5555' or 'api.example.com') (env: DESPLEGA_ENDPOINT) */
+  /** Base endpoint without protocol (e.g., 'api.desplega.ai/pw-reporter') (env: DESPLEGA_ENDPOINT) */
   endpoint?: string;
   /** Use secure connections - wss:// and https:// (default: true for non-localhost) (env: DESPLEGA_SECURE) */
   secure?: boolean;
@@ -123,7 +123,7 @@ class PlaywrightReporter implements Reporter {
    */
   private resolveConfig(config: ReporterConfig): ResolvedConfig {
     const endpoint =
-      process.env.DESPLEGA_ENDPOINT ?? config.endpoint ?? "localhost:5555";
+      process.env.DESPLEGA_ENDPOINT ?? config.endpoint ?? "api.desplega.ai/pw-reporter";
 
     const apiKey = process.env.DESPLEGA_API_KEY ?? config.apiKey ?? "";
 
