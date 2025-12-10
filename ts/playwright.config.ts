@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 import { defineConfig, devices } from "@playwright/test";
 import type { ReporterConfig } from "./lib/src/index";
 
@@ -18,9 +20,6 @@ export default defineConfig({
       {
         // All config can come from env vars:
         // DESPLEGA_ENDPOINT, DESPLEGA_API_KEY, DESPLEGA_SECURE, DESPLEGA_DEBUG
-        apiKey: process.env.DESPLEGA_API_KEY || "your-api-key",
-        endpoint: process.env.DESPLEGA_ENDPOINT || "localhost:5555",
-        secure: process.env.DESPLEGA_SECURE ? process.env.DESPLEGA_SECURE === "true" : false,
       } satisfies ReporterConfig,
     ],
   ],
@@ -32,7 +31,7 @@ export default defineConfig({
   },
   projects: [
     {
-      name: "base",
+      name: "desplega.ai Evals - Desktop Chrome",
       use: { ...devices["Desktop Chrome"] },
       metadata: {
         id: "1",

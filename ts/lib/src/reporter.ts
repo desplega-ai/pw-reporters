@@ -196,7 +196,10 @@ class PlaywrightReporter implements Reporter {
 
     this.log("Reporter initialized");
     this.log("  WebSocket:", this.getWsEndpoint());
-    this.log("  Upload:", this.uploader ? this.getUploadEndpoint() : "disabled");
+    this.log(
+      "  Upload:",
+      this.uploader ? this.getUploadEndpoint() : "disabled",
+    );
   }
 
   private log(...args: unknown[]): void {

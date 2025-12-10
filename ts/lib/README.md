@@ -53,22 +53,22 @@ DESPLEGA_DEBUG=false
 
 ```typescript
 interface ReporterConfig {
-  endpoint?: string;  // Base endpoint without protocol (e.g., 'api.desplega.ai')
-  apiKey?: string;    // API key for authentication
-  secure?: boolean;   // Use wss/https (default: true for non-localhost)
-  debug?: boolean;    // Enable debug logging (default: false)
+  endpoint?: string; // Base endpoint without protocol (e.g., 'api.desplega.ai')
+  apiKey?: string; // API key for authentication
+  secure?: boolean; // Use wss/https (default: true for non-localhost)
+  debug?: boolean; // Enable debug logging (default: false)
 
   reconnect?: {
-    enabled?: boolean;       // Enable auto-reconnection (default: true)
-    maxAttempts?: number;    // Max reconnect attempts (default: 10)
+    enabled?: boolean; // Enable auto-reconnection (default: true)
+    maxAttempts?: number; // Max reconnect attempts (default: 10)
     initialDelayMs?: number; // Initial delay (default: 1000)
-    maxDelayMs?: number;     // Max delay (default: 30000)
+    maxDelayMs?: number; // Max delay (default: 30000)
   };
   upload?: {
-    enabled?: boolean;    // Enable file uploads (default: true)
-    parallel?: number;    // Concurrent uploads (default: 3)
+    enabled?: boolean; // Enable file uploads (default: true)
+    parallel?: number; // Concurrent uploads (default: 3)
     chunkSizeMb?: number; // Chunk size for large files (default: 5)
-    retries?: number;     // Retry attempts per file (default: 3)
+    retries?: number; // Retry attempts per file (default: 3)
   };
 }
 ```
@@ -78,6 +78,7 @@ All options are optional - configuration can come entirely from environment vari
 ### Auto-derived Endpoints
 
 From the base endpoint, the reporter derives:
+
 - WebSocket: `ws[s]://{endpoint}/ws`
 - Upload: `http[s]://{endpoint}/upload`
 - Health: `http[s]://{endpoint}/health`
