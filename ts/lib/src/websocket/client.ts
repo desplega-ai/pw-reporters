@@ -1,3 +1,4 @@
+import WebSocket from "ws";
 import type { ReporterEvent } from "../types";
 import { MessageQueue } from "./message-queue";
 
