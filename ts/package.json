@@ -1,6 +1,6 @@
 {
   "name": "@desplega.ai/playwright-reporter",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "desplega.ai Playwright Reporter - A custom reporter for Playwright tests that integrates with the desplega.ai platform.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,9 @@
     "pw:test:ui": "playwright test --ui",
     "pw:test:headed": "playwright test --headed",
     "e2e:test": "bun e2e-test.ts",
-    "generate-schema": "ts-json-schema-generator --path lib/src/types.ts --type ReporterEvent --tsconfig tsconfig.json --expose all --jsDoc extended --strict-tuples --no-ref-encode --no-top-ref --out schemas/reporter-events.schema.json"
+    "generate-schema": "ts-json-schema-generator --path lib/src/types.ts --type ReporterEvent --tsconfig tsconfig.json --expose all --jsDoc extended --strict-tuples --no-ref-encode --no-top-ref --out schemas/reporter-events.schema.json",
+    "prepublishOnly": "bun run build",
+    "release": "bun run build && npm version patch && bun publish --access public"
   },
   "peerDependencies": {
     "@playwright/test": ">=1.40.0"
