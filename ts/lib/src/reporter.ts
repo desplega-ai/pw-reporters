@@ -109,6 +109,8 @@ class PlaywrightReporter implements Reporter {
   private runId: string;
   private disabled = false;
   private initialized = false;
+  /** Map from absolute attachment path -> test.id */
+  private attachmentTestMap: Map<string, string> = new Map();
 
   constructor(config: ReporterConfig = {}) {
     this.config = config;
@@ -311,6 +313,13 @@ class PlaywrightReporter implements Reporter {
   }
 
   onTestEnd(test: TestCase, result: TestResult): void {
+    // Track attachment -> test.id mapping for accurate file uploads
+    for (const attachment of result.attachments) {
+      if (attachment.path) {
+        this.attachmentTestMap.set(attachment.path, test.id);
+      }
+    }
+
     const event: OnTestEndEvent = {
       ...this.createBaseEvent("onTestEnd"),
       event: "onTestEnd",
@@ -395,6 +404,8 @@ class PlaywrightReporter implements Reporter {
     if (this.uploader) {
       this.log("Scanning test-results for files to upload...");
       await this.uploader.scanFiles("test-results");
+      // Enrich files with testId for accurate backend matching
+      this.uploader.enrichWithTestIds(this.attachmentTestMap);
     }
   }
 

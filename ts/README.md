@@ -21,8 +21,16 @@ export default defineConfig({
   reporter: [
     ["@desplega.ai/playwright-reporter"],
   ],
+  // Enable these options to capture recordings, logs, and traces
+  use: {
+    trace: "on",
+    video: "on",
+    screenshot: "on",
+  },
 });
 ```
+
+> **Note:** The reporter works without these options, but you won't have visibility into recordings, screenshots, or traces on the desplega.ai platform unless they are enabled.
 
 Configure via environment variables:
 

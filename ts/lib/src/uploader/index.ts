@@ -154,6 +154,20 @@ export class FileUploader {
   getFiles(): FileInfo[] {
     return this.files;
   }
+
+  /**
+   * Enrich scanned files with test IDs from the attachment map.
+   * Call this after scanFiles() to associate files with their tests.
+   */
+  enrichWithTestIds(attachmentTestMap: Map<string, string>): void {
+    for (const file of this.files) {
+      const testId = attachmentTestMap.get(file.path);
+      if (testId) {
+        file.testId = testId;
+        this.log(`Enriched ${file.relativePath} with testId: ${testId}`);
+      }
+    }
+  }
 }
 
 // Re-export types

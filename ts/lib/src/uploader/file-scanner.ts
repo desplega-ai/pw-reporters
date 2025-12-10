@@ -10,6 +10,8 @@ export interface FileInfo {
   name: string;
   /** Relative path from scan root */
   relativePath: string;
+  /** Playwright test ID that produced this attachment */
+  testId?: string;
 }
 
 export interface FileScannerConfig {

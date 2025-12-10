@@ -107,6 +107,9 @@ export class HttpUploader {
     formData.append("file", fileBlob, file.name);
     formData.append("runId", runId);
     formData.append("relativePath", file.relativePath);
+    if (file.testId) {
+      formData.append("testId", file.testId);
+    }
 
     const response = await fetch(this.config.endpoint, {
       method: "POST",
@@ -144,6 +147,9 @@ export class HttpUploader {
       formData.append("uploadId", uploadId);
       formData.append("chunkIndex", chunkIndex.toString());
       formData.append("totalChunks", totalChunks.toString());
+      if (file.testId) {
+        formData.append("testId", file.testId);
+      }
 
       const response = await fetch(`${this.config.endpoint}/chunk`, {
         method: "POST",
