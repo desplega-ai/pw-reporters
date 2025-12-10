@@ -1,6 +1,6 @@
 {
   "name": "@desplega.ai/playwright-reporter",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "desplega.ai Playwright Reporter - A custom reporter for Playwright tests that integrates with the desplega.ai platform.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
