@@ -9,6 +9,7 @@ tags: [research, playwright, trace, har, test-results]
 status: complete
 last_updated: 2025-12-09
 last_updated_by: Claude
+last_updated_note: "Added follow-up research for reconstructing spec files from trace data"
 ---
 
 # Research: Playwright Trace Format Analysis
@@ -255,8 +256,207 @@ Playwright separates concerns across multiple files:
 
 The `0-` prefix indicates the browser context index (supports multiple contexts per test).
 
+## Follow-up Research 2025-12-09T22:45:00-05:00
+
+### Reconstructing .spec.ts Files from Trace Data
+
+This section documents how an external process can extract and reconstruct working Playwright test files from trace.zip data.
+
+#### Key Files for Source Reconstruction
+
+| File | Purpose | Format |
+|------|---------|--------|
+| `0-trace.stacks` | Maps file indices to paths + contains actual file list | JSON (single line) |
+| `resources/src@{hash}.txt` | Actual source code content | Plain text |
+| `test.trace` | Test metadata including location and titles | NDJSON |
+| `0-trace.trace` | Browser context info with test title | NDJSON |
+
+#### Step-by-Step Algorithm
+
+**Step 1: Extract test metadata from `0-trace.trace` line 1**
+
+```json
+{
+  "version": 8,
+  "type": "context-options",
+  "origin": "library",
+  "browserName": "chromium",
+  "playwrightVersion": "1.57.0",
+  "sdkLanguage": "javascript",
+  "contextId": "browser-context@83348c64df60e077413900fa3b44dafb",
+  "title": "acceptance.spec.ts:18 › Acceptance › should display page title"
+}
+```
+
+Key fields:
+- `title`: Full test path in format `<file>:<line> › <describe> › <test name>`
+- `sdkLanguage`: "javascript" indicates TypeScript/JavaScript test
+
+**Step 2: Parse `0-trace.stacks` to get source file mapping**
+
+```json
+{
+  "files": [
+    "/Users/.../evals-page.pom.ts",
+    "/Users/.../acceptance.spec.ts"
+  ],
+  "stacks": [
+    [8, [[0, 19, 21, "EvalPage.goto"], [1, 15, 15, ""]]],
+    [10, [[1, 20, 57, ""]]]
+  ]
+}
+```
+
+The `files` array contains absolute paths of all source files used in the test.
+
+**Step 3: Locate source content in `resources/`**
+
+Source files are stored as `src@{sha1hash}.txt`. The hash is content-based but not a simple SHA1 of the file content - it appears to be an internal Playwright identifier.
+
+To match sources to files:
+1. List all `src@*.txt` files in `resources/`
+2. Read each file's content
+3. Parse the first line to identify the file type:
+   - `import { test, expect } from "@playwright/test"` → spec file
+   - `import type { Page, Locator }` → page object model
+   - `export class` → helper class
+
+**Step 4: Extract test structure from `test.trace`**
+
+Each test has location information in hook entries:
+
+```json
+{
+  "type": "before",
+  "callId": "hook@2",
+  "parentId": "hook@1",
+  "title": "beforeEach hook",
+  "stack": [{
+    "file": "/Users/.../acceptance.spec.ts",
+    "line": 13,
+    "column": 10
+  }]
+}
+```
+
+And API calls with locations:
+
+```json
+{
+  "type": "before",
+  "callId": "pw:api@36",
+  "title": "Navigate to \"/\"",
+  "stack": [{
+    "file": "/Users/.../evals-page.pom.ts",
+    "line": 19,
+    "column": 21,
+    "function": "EvalPage.goto"
+  }]
+}
+```
+
+**Step 5: Correlate stack traces to reconstruct test flow**
+
+The `stacks` array in `0-trace.stacks` uses this format:
+- `[callId, frames]` where `callId` matches the number suffix in `pw:api@X` or `expect@X`
+- Each frame is `[fileIndex, line, column, functionName]`
+- `fileIndex` references the `files` array
+
+Example: Stack entry `[8, [[0, 19, 21, "EvalPage.goto"], [1, 15, 15, ""]]]`
+- callId `8` = `pw:api@8` or `call@8` in traces
+- Frame 0: file[0] (evals-page.pom.ts), line 19, col 21, function "EvalPage.goto"
+- Frame 1: file[1] (acceptance.spec.ts), line 15, col 15
+
+#### Complete Data Extraction Structure
+
+```typescript
+interface TraceSourceData {
+  // From 0-trace.trace line 1
+  testInfo: {
+    title: string;           // "file:line › describe › test name"
+    browserName: string;     // "chromium"
+    playwrightVersion: string;
+    sdkLanguage: string;     // "javascript"
+  };
+
+  // From 0-trace.stacks
+  sourceFiles: {
+    path: string;            // Absolute file path
+    content: string;         // From src@{hash}.txt
+  }[];
+
+  // From test.trace
+  testSteps: {
+    title: string;           // "Navigate to '/'", "Expect 'toBeVisible'"
+    location?: {
+      file: string;
+      line: number;
+      column: number;
+      function?: string;
+    };
+    category: "hook" | "fixture" | "pw:api" | "expect";
+    params?: Record<string, string>;
+  }[];
+}
+```
+
+#### Practical Example: Extract All Sources from trace.zip
+
+```bash
+# 1. Unzip trace
+unzip trace.zip -d trace_extracted
+
+# 2. Get file mapping
+cat trace_extracted/0-trace.stacks | jq '.files'
+
+# 3. Read source files
+for f in trace_extracted/resources/src@*.txt; do
+  echo "=== $f ==="
+  head -5 "$f"
+done
+
+# 4. Get test title
+head -1 trace_extracted/0-trace.trace | jq '.title'
+```
+
+#### JSON Schema for External Process
+
+An external process wanting to reconstruct tests should:
+
+1. **Parse trace metadata:**
+   ```json
+   {
+     "specFile": "acceptance.spec.ts",
+     "testTitle": "should display page title",
+     "describePath": ["Acceptance"],
+     "line": 18
+   }
+   ```
+
+2. **Extract dependencies (imports):**
+   - The spec file's imports point to page objects/helpers
+   - All imported files should also be in the `files` array
+
+3. **Reconstruct by copying:**
+   - Main spec file content from `src@{hash}.txt`
+   - All POM/helper files similarly
+   - Preserve directory structure from absolute paths
+
+#### Limitations and Considerations
+
+1. **Not all source is captured**: Only files that appear in stack traces are included. Utility files not called during the test won't be in the trace.
+
+2. **Hash is not deterministic**: The `src@{hash}` hash doesn't match simple SHA1 of file content. It may be a Playwright internal identifier.
+
+3. **Absolute paths**: File paths are absolute to the machine where tests ran. External processes need to handle path translation.
+
+4. **No node_modules**: Playwright dependencies aren't included - only user test code.
+
+5. **Single test scope**: Each trace.zip contains data for ONE test. To reconstruct a full spec file with multiple tests, you'd need traces from all tests in that file.
+
 ## Open Questions
 
 - How does trace merging work across multiple test runs in a suite?
 - What determines when response bodies are included vs excluded from resources?
 - How are large response bodies handled (truncation, streaming)?
+- What algorithm does Playwright use for the `src@{hash}` identifier?
