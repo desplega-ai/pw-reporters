@@ -11,6 +11,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "pw:test": "playwright test",
+    "pw:test:shard": "playwright test --shard=1/4 --output=test-results/shard-1 & playwright test --shard=2/4 --output=test-results/shard-2 & playwright test --shard=3/4 --output=test-results/shard-3 & playwright test --shard=4/4 --output=test-results/shard-4 & wait",
     "pw:test:ui": "playwright test --ui",
     "pw:test:headed": "playwright test --headed",
     "e2e:test": "bun e2e-test.ts",
