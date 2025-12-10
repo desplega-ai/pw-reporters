@@ -16,7 +16,6 @@ test.describe(
     });
 
     test("should display page title", async ({ page }) => {
-      // await expect(page.getByText('desplega.ai evalz')).toBeVisible();
       await expect(page.getByText("desplega.ai evals")).toBeVisible();
     });
 
@@ -24,5 +23,16 @@ test.describe(
       await p.goToTable();
       await expect(page.getByText("Table Demo")).toBeVisible();
     });
+
+    test(
+      "this test is expected to fail",
+      {
+        tag: ["@fail"],
+      },
+      async ({ page }) => {
+        test.skip();
+        await expect(page.getByText("desplega.ai evalz")).toBeVisible();
+      },
+    );
   },
 );

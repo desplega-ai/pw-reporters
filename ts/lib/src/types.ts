@@ -200,6 +200,51 @@ export interface SerializedFullResult {
   duration: number;
 }
 
+/**
+ * Git repository information at time of test run
+ */
+export interface SerializedGitInfo {
+  /** Current branch name */
+  branch: string;
+  /** Full commit SHA */
+  commitSha: string;
+  /** Short commit SHA (7 chars) */
+  commitShaShort: string;
+  /** Commit message subject line */
+  commitMessage: string;
+  /** Commit author name */
+  authorName: string;
+  /** Commit author email */
+  authorEmail: string;
+  /** Commit timestamp (ISO 8601) */
+  commitTimestamp: string;
+  /** Tags pointing to current commit */
+  tags: string[];
+  /** Remote origin URL (sanitized) */
+  remoteOrigin: string | null;
+  /** Whether working directory has uncommitted changes */
+  isDirty: boolean;
+}
+
+/**
+ * Command-line information at time of test run.
+ * Sensitive values are sanitized/redacted.
+ */
+export interface SerializedCommandInfo {
+  /** Full command line as array (sanitized) */
+  argv: string[];
+  /** Reconstructed command string (sanitized) */
+  command: string;
+  /** Node.js executable path */
+  nodeExecutable: string;
+  /** Script path (playwright runner) */
+  scriptPath: string;
+  /** Arguments after 'test' command (sanitized) */
+  testArgs: string[];
+  /** Selected safe environment variables */
+  env: Record<string, string>;
+}
+
 // ============================================
 // Event Message Types
 // ============================================
@@ -217,6 +262,10 @@ export interface OnBeginEvent extends BaseEvent {
   event: "onBegin";
   config: SerializedConfig;
   suite: SerializedSuite;
+  /** Git repository info, null if not in a git repo */
+  git: SerializedGitInfo | null;
+  /** Command-line info (always available, sensitive values redacted) */
+  command: SerializedCommandInfo;
 }
 
 export interface OnTestBeginEvent extends BaseEvent {

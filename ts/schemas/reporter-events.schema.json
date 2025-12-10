@@ -36,12 +36,27 @@
     "OnBeginEvent": {
       "additionalProperties": false,
       "properties": {
+        "command": {
+          "$ref": "#/definitions/SerializedCommandInfo",
+          "description": "Command-line info (always available, sensitive values redacted)"
+        },
         "config": {
           "$ref": "#/definitions/SerializedConfig"
         },
         "event": {
           "const": "onBegin",
           "type": "string"
+        },
+        "git": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SerializedGitInfo"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Git repository info, null if not in a git repo"
         },
         "runId": {
           "type": "string"
@@ -54,8 +69,10 @@
         }
       },
       "required": [
+        "command",
         "config",
         "event",
+        "git",
         "runId",
         "suite",
         "timestamp"
@@ -351,6 +368,12 @@
       ],
       "type": "object"
     },
+    "Record<string,string>": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
     "SerializedAnnotation": {
       "additionalProperties": false,
       "description": "Test annotation (skip, fail, fixme, etc.)",
@@ -387,6 +410,51 @@
       "required": [
         "name",
         "contentType"
+      ],
+      "type": "object"
+    },
+    "SerializedCommandInfo": {
+      "additionalProperties": false,
+      "description": "Command-line information at time of test run. Sensitive values are sanitized/redacted.",
+      "properties": {
+        "argv": {
+          "description": "Full command line as array (sanitized)",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "command": {
+          "description": "Reconstructed command string (sanitized)",
+          "type": "string"
+        },
+        "env": {
+          "$ref": "#/definitions/Record<string,string>",
+          "description": "Selected safe environment variables"
+        },
+        "nodeExecutable": {
+          "description": "Node.js executable path",
+          "type": "string"
+        },
+        "scriptPath": {
+          "description": "Script path (playwright runner)",
+          "type": "string"
+        },
+        "testArgs": {
+          "description": "Arguments after 'test' command (sanitized)",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "argv",
+        "command",
+        "nodeExecutable",
+        "scriptPath",
+        "testArgs",
+        "env"
       ],
       "type": "object"
     },
@@ -571,6 +639,71 @@
         "status",
         "startTime",
         "duration"
+      ],
+      "type": "object"
+    },
+    "SerializedGitInfo": {
+      "additionalProperties": false,
+      "description": "Git repository information at time of test run",
+      "properties": {
+        "authorEmail": {
+          "description": "Commit author email",
+          "type": "string"
+        },
+        "authorName": {
+          "description": "Commit author name",
+          "type": "string"
+        },
+        "branch": {
+          "description": "Current branch name",
+          "type": "string"
+        },
+        "commitMessage": {
+          "description": "Commit message subject line",
+          "type": "string"
+        },
+        "commitSha": {
+          "description": "Full commit SHA",
+          "type": "string"
+        },
+        "commitShaShort": {
+          "description": "Short commit SHA (7 chars)",
+          "type": "string"
+        },
+        "commitTimestamp": {
+          "description": "Commit timestamp (ISO 8601)",
+          "type": "string"
+        },
+        "isDirty": {
+          "description": "Whether working directory has uncommitted changes",
+          "type": "boolean"
+        },
+        "remoteOrigin": {
+          "description": "Remote origin URL (sanitized)",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tags": {
+          "description": "Tags pointing to current commit",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "branch",
+        "commitSha",
+        "commitShaShort",
+        "commitMessage",
+        "authorName",
+        "authorEmail",
+        "commitTimestamp",
+        "tags",
+        "remoteOrigin",
+        "isDirty"
       ],
       "type": "object"
     },

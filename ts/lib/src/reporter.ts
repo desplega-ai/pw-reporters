@@ -33,6 +33,8 @@ import {
   serializeTestStep,
 } from "./serializers";
 
+import { getCommandInfo } from "./command";
+import { getGitInfo } from "./git";
 import { WebSocketClient } from "./websocket/client";
 import { FileUploader } from "./uploader/index";
 
@@ -304,11 +306,31 @@ class PlaywrightReporter implements Reporter {
     // Initialize WebSocket and uploader after health check passes
     this.initialize();
 
+    // Gather git info (safe - returns null if not in git repo)
+    const gitInfo = await getGitInfo();
+    if (gitInfo) {
+      this.log(
+        "Git info:",
+        gitInfo.branch,
+        gitInfo.commitShaShort,
+        gitInfo.isDirty ? "(dirty)" : "",
+      );
+    } else {
+      this.log("Git info: not available (not a git repo or git not installed)");
+    }
+
+    // Gather command info (always available, sensitive values sanitized)
+    const commandInfo = getCommandInfo();
+    this.log("Command:", commandInfo.command);
+    this.log("Test args:", commandInfo.testArgs.join(" "));
+
     const event: OnBeginEvent = {
       ...this.createBaseEvent("onBegin"),
       event: "onBegin",
       config: serializeConfig(config),
       suite: serializeSuite(suite),
+      git: gitInfo,
+      command: commandInfo,
     };
     this.sendEvent(event);
   }

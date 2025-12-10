@@ -131,9 +131,9 @@ async function main() {
     errors.push("No tests recorded");
   }
 
-  if (summary.tests.passed !== summary.tests.total) {
+  if (summary.tests.failed > 0) {
     errors.push(
-      `Some tests failed: ${summary.tests.passed}/${summary.tests.total} passed`,
+      `Some tests failed: ${summary.tests.failed}/${summary.tests.total} failed`,
     );
   }
 
