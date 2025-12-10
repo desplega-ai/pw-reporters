@@ -71,6 +71,9 @@ jobs:
     defaults:
       run:
         working-directory: ts
+    env:
+      DESPLEGA_ENDPOINT: localhost:5555
+      DESPLEGA_SECURE: "false"
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
