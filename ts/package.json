@@ -1,12 +1,11 @@
 {
   "name": "@desplega.ai/playwright-reporter",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "desplega.ai Playwright Reporter - A custom reporter for Playwright tests that integrates with the desplega.ai platform.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "scripts": {
-    "build": "bun build lib/src/index.ts --outdir dist --target node && tsc -p tsconfig.build.json",
+    "build": "bun build lib/src/index.ts --outdir dist --target node --format cjs && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "test": "bun test lib/src/",
     "format": "prettier --write .",
@@ -38,7 +37,9 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./schema.json": "./schemas/reporter-events.schema.json"
   },
