@@ -26,8 +26,8 @@ export default defineConfig({
   use: {
     baseURL: "https://evals.desplega.ai",
     trace: "on",
-    video: "on",
-    screenshot: "on",
+    video: "retry-with-video",
+    screenshot: "off",
   },
   projects: [
     {
