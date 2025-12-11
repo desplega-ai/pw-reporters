@@ -31,11 +31,11 @@ export default defineConfig({
   },
   projects: [
     {
-      name: "desplega.ai Evals - Desktop Chrome",
+      name: "Evals (Chrome)",
       use: { ...devices["Desktop Chrome"] },
       metadata: {
         id: "1",
       },
-    },
+    }
   ],
 });
