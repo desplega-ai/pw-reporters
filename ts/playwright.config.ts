@@ -20,14 +20,15 @@ export default defineConfig({
       {
         // All config can come from env vars:
         // DESPLEGA_ENDPOINT, DESPLEGA_API_KEY, DESPLEGA_SECURE, DESPLEGA_DEBUG
+        transport: "http",
       } satisfies ReporterConfig,
     ],
   ],
   use: {
     baseURL: "https://evals.desplega.ai",
     trace: "on",
-    video: "retry-with-video",
-    screenshot: "off",
+    video: "on",
+    screenshot: "on",
   },
   projects: [
     {
@@ -36,6 +37,6 @@ export default defineConfig({
       metadata: {
         id: "1",
       },
-    },
+    }
   ],
 });
