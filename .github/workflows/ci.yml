@@ -76,6 +76,7 @@ jobs:
       run:
         working-directory: ts
     env:
+      DESPLEGA_API_KEY: test-api-key
       DESPLEGA_ENDPOINT: localhost:5555
       DESPLEGA_SECURE: "false"
     steps:
