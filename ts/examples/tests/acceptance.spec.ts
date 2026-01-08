@@ -15,13 +15,13 @@ test.describe(
       await p.goto();
     });
 
-    [
-      ...Array.from({ length: 5 }, (_, i) => ({ name: i.toString() })),
-    ].forEach(({ name }) => {
-      test(`[${name}] should display page title`, async ({ page }) => {
-        await expect(page.getByText("desplega.ai evals")).toBeVisible();
-      });
-    });
+    [...Array.from({ length: 5 }, (_, i) => ({ name: i.toString() }))].forEach(
+      ({ name }) => {
+        test(`[${name}] should display page title`, async ({ page }) => {
+          await expect(page.getByText("desplega.ai evals")).toBeVisible();
+        });
+      },
+    );
 
     test("should go to tables", async ({ page }) => {
       await p.goToTable();

@@ -322,6 +322,44 @@ export interface OnExitEvent extends BaseEvent {
   event: "onExit";
 }
 
+// ============================================
+// HTTP Batch Transport Types
+// ============================================
+
+/**
+ * Shard information for parallel test runs
+ */
+export interface ShardInfo {
+  current: number;
+  total: number;
+}
+
+/**
+ * Semantic batch containing related events
+ */
+export interface SemanticBatch {
+  /** Unique run identifier */
+  run_id: string;
+  /** Type of batch determining its contents */
+  batch_type: "run_begin" | "test_complete" | "run_end" | "error" | "output";
+  /** Incrementing sequence number for ordering (1, 2, 3, ...) */
+  sequence: number;
+  /** Events contained in this batch */
+  events: ReporterEvent[];
+
+  /** Test ID (for test_complete batches) */
+  test_id?: string;
+  /** Retry attempt number (for test_complete batches) */
+  retry_count?: number;
+
+  /** ISO 8601 timestamp when batch was created */
+  timestamp: string;
+  /** Path to Playwright config file */
+  config_file?: string;
+  /** Shard info for parallel runs */
+  shard?: ShardInfo;
+}
+
 /**
  * Union of all event types
  */
