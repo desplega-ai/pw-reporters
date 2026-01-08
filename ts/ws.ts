@@ -331,6 +331,8 @@ async function handleBatch(req: Request): Promise<Response> {
       console.log(`  - Retry: ${batch.retry_count ?? 0}`);
     } else if (batch.batch_type === "run_end") {
       console.log(`  - Final status: ${batch.events?.[0]?.result?.status}`);
+      // Write summary file when run ends (for HTTP transport)
+      await writeSummaryFile();
     }
 
     return Response.json({
