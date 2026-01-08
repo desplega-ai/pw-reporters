@@ -30,6 +30,11 @@ interface RunSummary {
     chunks: number;
     totalBytes: number;
   };
+  batches: {
+    count: number;
+    by_type: Record<string, number>;
+    total_events: number;
+  };
   startTime: string | null;
   endTime: string | null;
   finalStatus: string | null;
@@ -40,6 +45,7 @@ const summary: RunSummary = {
   events: {},
   tests: { total: 0, passed: 0, failed: 0, skipped: 0 },
   uploads: { files: 0, chunks: 0, totalBytes: 0 },
+  batches: { count: 0, by_type: {}, total_events: 0 },
   startTime: null,
   endTime: null,
   finalStatus: null,
@@ -118,6 +124,11 @@ const server = Bun.serve({
     // Chunked upload endpoint
     if (url.pathname === "/upload/chunk" && req.method === "POST") {
       return handleChunkedUpload(req);
+    }
+
+    // Batch endpoint for HTTP transport
+    if (url.pathname === "/batch" && req.method === "POST") {
+      return handleBatch(req);
     }
 
     // Health check
@@ -282,6 +293,59 @@ async function handleChunkedUpload(req: Request): Promise<Response> {
 }
 
 /**
+ * Handle semantic batch from HTTP transport
+ */
+async function handleBatch(req: Request): Promise<Response> {
+  const authHeader = req.headers.get("authorization");
+  if (!authHeader?.startsWith("Bearer ")) {
+    return new Response("Unauthorized", { status: 401 });
+  }
+
+  try {
+    const batch = await req.json();
+
+    console.log(
+      `[Batch] ${batch.batch_type} (seq: ${batch.sequence}, events: ${batch.events?.length ?? 0}) for run ${batch.run_id?.slice(0, 15)}...`,
+    );
+
+    // Track batch stats
+    summary.batches.count++;
+    summary.batches.by_type[batch.batch_type] =
+      (summary.batches.by_type[batch.batch_type] ?? 0) + 1;
+    summary.batches.total_events += batch.events?.length ?? 0;
+
+    // Record individual events for consistent test counting
+    if (batch.events) {
+      for (const event of batch.events) {
+        recordEvent(event);
+      }
+    }
+
+    // Log details for specific batch types
+    if (batch.batch_type === "run_begin") {
+      const beginEvent = batch.events?.[0];
+      console.log(`  - Projects: ${beginEvent?.config?.projects?.length ?? 0}`);
+      console.log(`  - Config: ${batch.config_file ?? "unknown"}`);
+    } else if (batch.batch_type === "test_complete") {
+      console.log(`  - Test ID: ${batch.test_id}`);
+      console.log(`  - Retry: ${batch.retry_count ?? 0}`);
+    } else if (batch.batch_type === "run_end") {
+      console.log(`  - Final status: ${batch.events?.[0]?.result?.status}`);
+    }
+
+    return Response.json({
+      success: true,
+      batch_type: batch.batch_type,
+      sequence: batch.sequence,
+      events_received: batch.events?.length ?? 0,
+    });
+  } catch (error) {
+    console.error("[Batch] Error:", error);
+    return new Response("Batch processing failed", { status: 500 });
+  }
+}
+
+/**
  * Count total tests in a suite tree
  */
 function countTests(suite: { testIds?: string[]; suites?: unknown[] }): number {
@@ -314,6 +378,7 @@ console.log(`
   Test Server Running
 ====================================
   WebSocket: ws://localhost:${server.port}
+  Batch:     http://localhost:${server.port}/batch
   Upload:    http://localhost:${server.port}/upload
   Health:    http://localhost:${server.port}/health
   Summary:   http://localhost:${server.port}/summary

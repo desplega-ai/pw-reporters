@@ -36,6 +36,6 @@ export default defineConfig({
       metadata: {
         id: "1",
       },
-    }
+    },
   ],
 });

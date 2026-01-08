@@ -37,6 +37,7 @@ import { getCommandInfo } from "./command";
 import { getGitInfo } from "./git";
 import { WebSocketClient } from "./websocket/client";
 import { FileUploader } from "./uploader/index";
+import { HttpBatchClient, BatchAccumulator } from "./http/index";
 
 /**
  * Configuration options for the reporter
@@ -80,6 +81,8 @@ export interface ReporterConfig {
     /** Number of retry attempts (default: 3) */
     retries?: number;
   };
+  /** Transport mode: 'websocket' (default, real-time streaming) or 'http' (semantic batching) */
+  transport?: "websocket" | "http";
 }
 
 /**
@@ -97,6 +100,7 @@ interface ResolvedConfig {
   endpoint: string;
   secure: boolean;
   debug: boolean;
+  transport: "websocket" | "http";
 }
 
 /**
@@ -115,6 +119,10 @@ class PlaywrightReporter implements Reporter {
   private attachmentTestMap: Map<string, string> = new Map();
   /** Output directory for test artifacts (from Playwright config) */
   private outputDir: string = "test-results";
+  /** HTTP batch client (when transport is 'http') */
+  private httpClient: HttpBatchClient | null = null;
+  /** Batch accumulator (when transport is 'http') */
+  private batchAccumulator: BatchAccumulator | null = null;
 
   constructor(config: ReporterConfig = {}) {
     this.config = config;
@@ -148,7 +156,13 @@ class PlaywrightReporter implements Reporter {
     const debug =
       debugEnv !== undefined ? debugEnv === "true" : (config.debug ?? false);
 
-    return { apiKey, endpoint, secure, debug };
+    const transportEnv = process.env.DESPLEGA_TRANSPORT;
+    const transport: "websocket" | "http" =
+      transportEnv === "http" || transportEnv === "websocket"
+        ? transportEnv
+        : (config.transport ?? "websocket");
+
+    return { apiKey, endpoint, secure, debug, transport };
   }
 
   /**
@@ -176,21 +190,46 @@ class PlaywrightReporter implements Reporter {
   }
 
   /**
-   * Initialize WebSocket client and uploader after health check passes
+   * Get HTTP batch endpoint URL
+   */
+  private getBatchEndpoint(): string {
+    const protocol = this.resolved.secure ? "https" : "http";
+    return `${protocol}://${this.resolved.endpoint}/batch`;
+  }
+
+  /**
+   * Initialize transport client and uploader after health check passes
    */
   private initialize(): void {
     if (this.initialized) return;
     this.initialized = true;
 
-    // Initialize WebSocket client
-    this.wsClient = new WebSocketClient({
-      endpoint: this.getWsEndpoint(),
-      apiKey: this.resolved.apiKey,
-      reconnect: this.config.reconnect,
-      debug: this.resolved.debug,
-    });
+    // Initialize transport based on config
+    if (this.resolved.transport === "http") {
+      this.httpClient = new HttpBatchClient({
+        endpoint: this.getBatchEndpoint(),
+        apiKey: this.resolved.apiKey,
+        retries: 3,
+        debug: this.resolved.debug,
+      });
+      this.batchAccumulator = new BatchAccumulator(
+        this.httpClient,
+        this.resolved.debug,
+      );
+      this.log("HTTP batch transport initialized");
+      this.log("  Batch endpoint:", this.getBatchEndpoint());
+    } else {
+      this.wsClient = new WebSocketClient({
+        endpoint: this.getWsEndpoint(),
+        apiKey: this.resolved.apiKey,
+        reconnect: this.config.reconnect,
+        debug: this.resolved.debug,
+      });
+      this.log("WebSocket transport initialized");
+      this.log("  WebSocket:", this.getWsEndpoint());
+    }
 
-    // Initialize file uploader if enabled
+    // Initialize file uploader if enabled (same for both transports)
     if (this.config.upload?.enabled !== false) {
       this.uploader = new FileUploader({
         endpoint: this.getUploadEndpoint(),
@@ -202,8 +241,6 @@ class PlaywrightReporter implements Reporter {
       });
     }
 
-    this.log("Reporter initialized");
-    this.log("  WebSocket:", this.getWsEndpoint());
     this.log(
       "  Upload:",
       this.uploader ? this.getUploadEndpoint() : "disabled",
@@ -332,7 +369,12 @@ class PlaywrightReporter implements Reporter {
       git: gitInfo,
       command: commandInfo,
     };
-    this.sendEvent(event);
+
+    if (this.batchAccumulator) {
+      await this.batchAccumulator.handleRunBegin(event);
+    } else {
+      this.sendEvent(event);
+    }
   }
 
   onTestBegin(test: TestCase, result: TestResult): void {
@@ -342,10 +384,15 @@ class PlaywrightReporter implements Reporter {
       test: serializeTestCase(test),
       result: serializeTestResult(result),
     };
-    this.sendEvent(event);
+
+    if (this.batchAccumulator) {
+      this.batchAccumulator.handleTestBegin(event);
+    } else {
+      this.sendEvent(event);
+    }
   }
 
-  onTestEnd(test: TestCase, result: TestResult): void {
+  async onTestEnd(test: TestCase, result: TestResult): Promise<void> {
     // Track attachment -> test.id mapping for accurate file uploads
     for (const attachment of result.attachments) {
       if (attachment.path) {
@@ -362,7 +409,12 @@ class PlaywrightReporter implements Reporter {
       test: serializeTestCase(test),
       result: serializeTestResult(result),
     };
-    this.sendEvent(event);
+
+    if (this.batchAccumulator) {
+      await this.batchAccumulator.handleTestEnd(event);
+    } else {
+      this.sendEvent(event);
+    }
   }
 
   onStepBegin(test: TestCase, result: TestResult, step: TestStep): void {
@@ -373,7 +425,12 @@ class PlaywrightReporter implements Reporter {
       result: serializeTestResult(result),
       step: serializeTestStep(step),
     };
-    this.sendEvent(event);
+
+    if (this.batchAccumulator) {
+      this.batchAccumulator.handleStepBegin(event);
+    } else {
+      this.sendEvent(event);
+    }
   }
 
   onStepEnd(test: TestCase, result: TestResult, step: TestStep): void {
@@ -384,16 +441,26 @@ class PlaywrightReporter implements Reporter {
       result: serializeTestResult(result),
       step: serializeTestStep(step),
     };
-    this.sendEvent(event);
+
+    if (this.batchAccumulator) {
+      this.batchAccumulator.handleStepEnd(event);
+    } else {
+      this.sendEvent(event);
+    }
   }
 
-  onError(error: TestError): void {
+  async onError(error: TestError): Promise<void> {
     const event: OnErrorEvent = {
       ...this.createBaseEvent("onError"),
       event: "onError",
       error: serializeTestError(error),
     };
-    this.sendEvent(event);
+
+    if (this.batchAccumulator) {
+      await this.batchAccumulator.handleError(event);
+    } else {
+      this.sendEvent(event);
+    }
   }
 
   onStdOut(
@@ -408,7 +475,12 @@ class PlaywrightReporter implements Reporter {
       test: test ? serializeTestCase(test) : null,
       result: result ? serializeTestResult(result) : null,
     };
-    this.sendEvent(event);
+
+    if (this.batchAccumulator) {
+      this.batchAccumulator.handleStdOut(event);
+    } else {
+      this.sendEvent(event);
+    }
   }
 
   onStdErr(
@@ -423,7 +495,12 @@ class PlaywrightReporter implements Reporter {
       test: test ? serializeTestCase(test) : null,
       result: result ? serializeTestResult(result) : null,
     };
-    this.sendEvent(event);
+
+    if (this.batchAccumulator) {
+      this.batchAccumulator.handleStdErr(event);
+    } else {
+      this.sendEvent(event);
+    }
   }
 
   async onEnd(result: FullResult): Promise<void> {
@@ -434,7 +511,12 @@ class PlaywrightReporter implements Reporter {
       event: "onEnd",
       result: serializeFullResult(result),
     };
-    this.sendEvent(event);
+
+    if (this.batchAccumulator) {
+      this.batchAccumulator.handleEnd(event);
+    } else {
+      this.sendEvent(event);
+    }
 
     // Build manifest of files to upload
     if (this.uploader) {
@@ -459,12 +541,16 @@ class PlaywrightReporter implements Reporter {
       ...this.createBaseEvent("onExit"),
       event: "onExit",
     };
-    this.sendEvent(event);
 
-    // Close WebSocket connection gracefully
-    if (this.wsClient) {
-      this.log("Closing WebSocket connection...");
-      await this.wsClient.close();
+    if (this.batchAccumulator) {
+      await this.batchAccumulator.handleExit(event);
+    } else {
+      this.sendEvent(event);
+      // Close WebSocket connection gracefully
+      if (this.wsClient) {
+        this.log("Closing WebSocket connection...");
+        await this.wsClient.close();
+      }
     }
 
     this.log("Reporter finished");

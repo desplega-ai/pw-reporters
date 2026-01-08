@@ -29,6 +29,9 @@ export type {
   OnStdOutEvent,
   OnStdErrEvent,
   OnExitEvent,
+  // HTTP Batch Transport types
+  ShardInfo,
+  SemanticBatch,
 } from "./types";
 
 // Serializers
