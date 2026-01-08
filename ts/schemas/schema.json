@@ -1,37 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "anyOf": [
-    {
-      "$ref": "#/definitions/OnBeginEvent"
-    },
-    {
-      "$ref": "#/definitions/OnTestBeginEvent"
-    },
-    {
-      "$ref": "#/definitions/OnTestEndEvent"
-    },
-    {
-      "$ref": "#/definitions/OnStepBeginEvent"
-    },
-    {
-      "$ref": "#/definitions/OnStepEndEvent"
-    },
-    {
-      "$ref": "#/definitions/OnErrorEvent"
-    },
-    {
-      "$ref": "#/definitions/OnEndEvent"
-    },
-    {
-      "$ref": "#/definitions/OnStdOutEvent"
-    },
-    {
-      "$ref": "#/definitions/OnStdErrEvent"
-    },
-    {
-      "$ref": "#/definitions/OnExitEvent"
-    }
-  ],
+  "additionalProperties": false,
   "definitions": {
     "OnBeginEvent": {
       "additionalProperties": false,
@@ -372,6 +341,101 @@
       "additionalProperties": {
         "type": "string"
       },
+      "type": "object"
+    },
+    "ReporterEvent": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/OnBeginEvent"
+        },
+        {
+          "$ref": "#/definitions/OnTestBeginEvent"
+        },
+        {
+          "$ref": "#/definitions/OnTestEndEvent"
+        },
+        {
+          "$ref": "#/definitions/OnStepBeginEvent"
+        },
+        {
+          "$ref": "#/definitions/OnStepEndEvent"
+        },
+        {
+          "$ref": "#/definitions/OnErrorEvent"
+        },
+        {
+          "$ref": "#/definitions/OnEndEvent"
+        },
+        {
+          "$ref": "#/definitions/OnStdOutEvent"
+        },
+        {
+          "$ref": "#/definitions/OnStdErrEvent"
+        },
+        {
+          "$ref": "#/definitions/OnExitEvent"
+        }
+      ],
+      "description": "Union of all event types"
+    },
+    "SemanticBatch": {
+      "additionalProperties": false,
+      "description": "Semantic batch containing related events",
+      "properties": {
+        "batch_type": {
+          "description": "Type of batch determining its contents",
+          "enum": [
+            "run_begin",
+            "test_complete",
+            "run_end",
+            "error",
+            "output"
+          ],
+          "type": "string"
+        },
+        "config_file": {
+          "description": "Path to Playwright config file",
+          "type": "string"
+        },
+        "events": {
+          "description": "Events contained in this batch",
+          "items": {
+            "$ref": "#/definitions/ReporterEvent"
+          },
+          "type": "array"
+        },
+        "retry_count": {
+          "description": "Retry attempt number (for test_complete batches)",
+          "type": "number"
+        },
+        "run_id": {
+          "description": "Unique run identifier",
+          "type": "string"
+        },
+        "sequence": {
+          "description": "Incrementing sequence number for ordering (1, 2, 3, ...)",
+          "type": "number"
+        },
+        "shard": {
+          "$ref": "#/definitions/ShardInfo",
+          "description": "Shard info for parallel runs"
+        },
+        "test_id": {
+          "description": "Test ID (for test_complete batches)",
+          "type": "string"
+        },
+        "timestamp": {
+          "description": "ISO 8601 timestamp when batch was created",
+          "type": "string"
+        }
+      },
+      "required": [
+        "run_id",
+        "batch_type",
+        "sequence",
+        "events",
+        "timestamp"
+      ],
       "type": "object"
     },
     "SerializedAnnotation": {
@@ -1110,7 +1174,39 @@
         "steps"
       ],
       "type": "object"
+    },
+    "ShardInfo": {
+      "additionalProperties": false,
+      "description": "Shard information for parallel test runs",
+      "properties": {
+        "current": {
+          "type": "number"
+        },
+        "total": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "current",
+        "total"
+      ],
+      "type": "object"
     }
   },
-  "description": "Union of all event types"
+  "description": "Root schema type containing all exported types. Used for JSON schema generation to produce a single schema file.",
+  "properties": {
+    "batch": {
+      "$ref": "#/definitions/SemanticBatch",
+      "description": "Batch of events (HTTP transport)"
+    },
+    "event": {
+      "$ref": "#/definitions/ReporterEvent",
+      "description": "Single reporter event (WebSocket transport)"
+    }
+  },
+  "required": [
+    "event",
+    "batch"
+  ],
+  "type": "object"
 }

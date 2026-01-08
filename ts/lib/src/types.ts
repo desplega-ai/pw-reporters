@@ -374,3 +374,18 @@ export type ReporterEvent =
   | OnStdOutEvent
   | OnStdErrEvent
   | OnExitEvent;
+
+// ============================================
+// Schema Export Type
+// ============================================
+
+/**
+ * Root schema type containing all exported types.
+ * Used for JSON schema generation to produce a single schema file.
+ */
+export interface PlaywrightReporterSchema {
+  /** Single reporter event (WebSocket transport) */
+  event: ReporterEvent;
+  /** Batch of events (HTTP transport) */
+  batch: SemanticBatch;
+}
