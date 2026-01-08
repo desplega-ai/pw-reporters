@@ -293,6 +293,26 @@ async function handleChunkedUpload(req: Request): Promise<Response> {
 }
 
 /**
+ * Batch payload type for HTTP transport
+ */
+interface BatchPayload {
+  run_id: string;
+  batch_type: string;
+  sequence: number;
+  events: Array<{
+    event: string;
+    runId?: string;
+    result?: { status?: string };
+    test?: unknown;
+    config?: { projects?: unknown[] };
+  }>;
+  test_id?: string;
+  retry_count?: number;
+  config_file?: string;
+  shard?: { current: number; total: number };
+}
+
+/**
  * Handle semantic batch from HTTP transport
  */
 async function handleBatch(req: Request): Promise<Response> {
@@ -302,7 +322,7 @@ async function handleBatch(req: Request): Promise<Response> {
   }
 
   try {
-    const batch = await req.json();
+    const batch = (await req.json()) as BatchPayload;
 
     console.log(
       `[Batch] ${batch.batch_type} (seq: ${batch.sequence}, events: ${batch.events?.length ?? 0}) for run ${batch.run_id?.slice(0, 15)}...`,
@@ -319,6 +339,11 @@ async function handleBatch(req: Request): Promise<Response> {
       for (const event of batch.events) {
         recordEvent(event);
       }
+    }
+
+    // Log shard info if present
+    if (batch.shard) {
+      console.log(`  - Shard: ${batch.shard.current}/${batch.shard.total}`);
     }
 
     // Log details for specific batch types

@@ -66,8 +66,12 @@ jobs:
           path: ts/dist
 
   e2e:
-    name: E2E Tests
+    name: E2E Tests (${{ matrix.transport }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        transport: [websocket, http]
     defaults:
       run:
         working-directory: ts
@@ -79,10 +83,10 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun install --frozen-lockfile
       - run: bunx playwright install --with-deps chromium
-      - run: bun run e2e:test
+      - run: bun run e2e:test -- --${{ matrix.transport }}
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: playwright-report
+          name: playwright-report-${{ matrix.transport }}
           path: ts/test-results
           retention-days: 7
